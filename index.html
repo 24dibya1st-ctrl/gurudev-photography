@@ -107,61 +107,65 @@
 <a class="text-[#C6C6C6] hover:opacity-80 transition-opacity" href="#">Reels</a>
 <a class="text-[#C6C6C6] hover:opacity-80 transition-opacity" href="#">Archive</a>
 </nav>
-<button class="hover:opacity-80 transition-opacity scale-95 duration-200">
-<span class="material-symbols-outlined text-[#FFD700]">settings</span>
-</button>
-</div>
-</header>
-<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
-<section class="mb-16">
-<div class="relative rounded-xl overflow-hidden min-h-[400px] flex items-end p-8 lg:p-12 border border-outline-variant/10">
-<div class="absolute inset-0 z-0">
-<img alt="Wedding Photography Background" class="w-full h-full object-cover opacity-40" data-alt="cinematic wide shot of a wedding ceremony in a grand cathedral with dramatic lighting and long shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALblcvtPPxDyQs5QriTDcPxgvR1aSWP9LwHHrCktxuqRQibe3LYkW3GMIvf02N0ozkf8Hgo9t18MitE1nxiAqiqAH-iNIoLP_p8rIenM8-Qva5n27HEB33JqcgjEbxhjp8Os2T2Z49cUsb6LMAYK6QjuCDVLAAwbyvW4jCCjNWtxT-jGjfB6tdkP8C-wmrKnG8aP-reZoMAcaelhwIr4INqEzB_Q7xXnqoVFt-epgZZPZBFMVqM8X2VYwq11XE-ZeTCYAAIynGm_-U">
-<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-transparent"></div>
-</div>
-<div class="relative z-10 w-full lg:w-2/3">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/10 border border-primary-container/20 text-primary-container text-xs font-bold tracking-widest uppercase mb-6">
-<span class="relative flex h-2 w-2">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
-<span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span>
-</span>
-                        Latest Episode: Mastering the Light
-                    </div>
-<h1 class="font-headline text-4xl md:text-6xl text-primary leading-tight mb-6 -tracking-wider">
-                        The Cinematic <br><span class="italic text-primary-container">Wedding Blueprint</span>
-</h1>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 glass-panel p-6 rounded-xl border border-outline-variant/20">
-<div>
-<p class="text-secondary text-[10px] uppercase tracking-widest mb-2 font-bold">Duration</p>
-<p class="text-on-surface font-headline italic">124 Minutes</p>
-</div>
-<div>
-<p class="text-secondary text-[10px] uppercase tracking-widest mb-2 font-bold">Key Takeaways</p>
-<p class="text-on-surface font-headline italic">12 Strategy Points</p>
-</div>
-<div>
-<p class="text-secondary text-[10px] uppercase tracking-widest mb-2 font-bold">Episode ID</p>
-<p class="text-on-surface font-headline italic">#GP-EP24-01</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<footer class="pt-8 pb-32 md:pb-12 px-6 max-w-7xl mx-auto border-t border-outline-variant/20">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 mt-12">
-        <div>
-            <span class="font-['Noto_Serif'] tracking-tighter italic text-2xl font-serif text-primary-container mb-4 block">Gurudev Photography</span>
-            <p class="text-secondary text-sm font-light leading-relaxed max-w-sm">Crafting cinematic wedding narratives and luxury editorial moments for the discerning couple.</p>
-        </div>
-        <div>
-            <p class="text-primary-container text-[10px] uppercase tracking-widest font-bold mb-6">Contact Info</p>
-            <ul class="space-y-4 text-secondary text-sm font-light">
-                <li class="flex items-center gap-3 hover:text-primary transition-colors cursor-pointer"><span class="material-symbols-outlined text-lg text-primary-container/80">call</span> +91 88474870066</li>
-                <li class="flex items-center gap-3 hover:text-primary transition-colors cursor-pointer"><span class="material-symbols-outlined text-lg text-primary-container/80">mail</span> Suryabehera533@gmail.com</li>
-                <li class="flex items-center gap-3"><span class="material-symbols-outlined text-lg text-primary-container/80">location_on</span> Bhadrak, Odisha</li>
-            </ul>
-        </div>
+<!-- ADMIN PRICING PANEL -->
+<div id="adminOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:999;backdrop-filter:blur(6px);" onclick="if(event.target===this)closeAdminPanel()"></div>
+<div id="adminPanel" style="display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:min(520px,94vw);background:#1c1b1b;border:1px solid rgba(212,175,55,0.3);border-radius:1rem;z-index:1000;padding:2rem;box-shadow:0 0 60px rgba(212,175,55,0.1);">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
+    <div>
+      <p style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:#d4af37;margin-bottom:0.25rem;">Admin Settings</p>
+      <h2 style="font-family:Noto Serif,serif;font-size:1.5rem;font-weight:300;color:#e5e2e1;">Edit Pricing Packages</h2>
     </div>
-</footer>
+    <button onclick="closeAdminPanel()" style="background:none;border:none;color:#99907c;cursor:pointer;font-size:1.5rem;">&times;</button>
+  </div>
+  <div id="adminLogin">
+    <p style="font-size:0.85rem;color:#d0c5af;margin-bottom:1rem;">Enter admin password to edit pricing:</p>
+    <div style="display:flex;gap:0.75rem;">
+      <input id="adminPass" type="password" placeholder="Admin password..." onkeydown="if(event.key==='Enter')checkAdminPass()" style="flex:1;background:#2a2a2a;border:1px solid rgba(153,144,124,0.2);border-radius:0.5rem;padding:0.75rem 1rem;color:#e5e2e1;font-size:0.9rem;outline:none;"/>
+      <button onclick="checkAdminPass()" style="background:linear-gradient(135deg,#f2ca50,#d4af37);color:#241a00;border:none;border-radius:0.5rem;padding:0.75rem 1.25rem;font-weight:700;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">Login</button>
+    </div>
+    <p id="loginError" style="color:#ff6b6b;font-size:0.8rem;margin-top:0.5rem;display:none;">Wrong password. Try again.</p>
+  </div>
+  <div id="pricingEditor" style="display:none;">
+    <p style="font-size:0.8rem;color:#d0c5af;margin-bottom:1.5rem;">Changes appear live on the Pricing page.</p>
+    <div style="background:#2a2a2a;border-radius:0.75rem;padding:1.25rem;margin-bottom:1rem;border:1px solid rgba(153,144,124,0.15);">
+      <p style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:#d4af37;margin-bottom:0.75rem;">Package 1</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+        <div><label style="font-size:0.6rem;color:#99907c;display:block;margin-bottom:0.3rem;">Name</label><input id="p1name" type="text" style="width:100%;background:#131313;border:1px solid rgba(153,144,124,0.2);border-radius:0.4rem;padding:0.6rem;color:#e5e2e1;font-size:0.85rem;outline:none;"/></div>
+        <div><label style="font-size:0.6rem;color:#99907c;display:block;margin-bottom:0.3rem;">Price (Rs)</label><input id="p1price" type="number" style="width:100%;background:#131313;border:1px solid rgba(153,144,124,0.2);border-radius:0.4rem;padding:0.6rem;color:#e5e2e1;font-size:0.85rem;outline:none;"/></div>
+        <div style="grid-column:1/-1;"><label style="font-size:0.6rem;color:#99907c;display:block;margin-bottom:0.3rem;">Description</label><input id="p1desc" type="text" style="width:100%;background:#131313;border:1px solid rgba(153,144,124,0.2);border-radius:0.4rem;padding:0.6rem;color:#e5e2e1;font-size:0.85rem;outline:none;"/></div>
+      </div>
+    </div>
+    <div style="background:#2a2a2a;border-radius:0.75rem;padding:1.25rem;margin-bottom:1rem;border:1px solid rgba(212,175,55,0.25);">
+      <p style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:#d4af37;margin-bottom:0.75rem;">Package 2 (Featured)</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+        <div><label style="font-size:0.6rem;color:#99907c;display:block;margin-bottom:0.3rem;">Name</label><input id="p2name" type="text" style="width:100%;background:#131313;border:1px solid rgba(153,144,124,0.2);border-radius:0.4rem;padding:0.6rem;color:#e5e2e1;font-size:0.85rem;outline:none;"/></div>
+        <div><label style="font-size:0.6rem;color:#99907c;display:block;margin-bottom:0.3rem;">Price (Rs)</label><input id="p2price" type="number" style="width:100%;background:#131313;border:1px solid rgba(153,144,124,0.2);border-radius:0.4rem;padding:0.6rem;color:#e5e2e1;font-size:0.85rem;outline:none;"/></div>
+        <div style="grid-column:1/-1;"><label style="font-size:0.6rem;color:#99907c;display:block;margin-bottom:0.3rem;">Description</label><input id="p2desc" type="text" style="width:100%;background:#131313;border:1px solid rgba(153,144,124,0.2);border-radius:0.4rem;padding:0.6rem;color:#e5e2e1;font-size:0.85rem;outline:none;"/></div>
+      </div>
+    </div>
+    <div style="background:#2a2a2a;border-radius:0.75rem;padding:1.25rem;margin-bottom:1.5rem;border:1px solid rgba(153,144,124,0.15);">
+      <p style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:#d4af37;margin-bottom:0.75rem;">Package 3</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+        <div><label style="font-size:0.6rem;color:#99907c;display:block;margin-bottom:0.3rem;">Name</label><input id="p3name" type="text" style="width:100%;background:#131313;border:1px solid rgba(153,144,124,0.2);border-radius:0.4rem;padding:0.6rem;color:#e5e2e1;font-size:0.85rem;outline:none;"/></div>
+        <div><label style="font-size:0.6rem;color:#99907c;display:block;margin-bottom:0.3rem;">Price (Rs)</label><input id="p3price" type="number" style="width:100%;background:#131313;border:1px solid rgba(153,144,124,0.2);border-radius:0.4rem;padding:0.6rem;color:#e5e2e1;font-size:0.85rem;outline:none;"/></div>
+        <div style="grid-column:1/-1;"><label style="font-size:0.6rem;color:#99907c;display:block;margin-bottom:0.3rem;">Description</label><input id="p3desc" type="text" style="width:100%;background:#131313;border:1px solid rgba(153,144,124,0.2);border-radius:0.4rem;padding:0.6rem;color:#e5e2e1;font-size:0.85rem;outline:none;"/></div>
+      </div>
+    </div>
+    <div style="display:flex;gap:1rem;justify-content:flex-end;">
+      <button onclick="resetPricing()" style="background:none;border:1px solid rgba(153,144,124,0.3);color:#99907c;border-radius:0.5rem;padding:0.7rem 1.25rem;font-size:0.7rem;font-weight:600;text-transform:uppercase;cursor:pointer;">Reset</button>
+      <button onclick="savePricing()" style="background:linear-gradient(135deg,#f2ca50,#d4af37);color:#241a00;border:none;border-radius:0.5rem;padding:0.7rem 1.5rem;font-size:0.7rem;font-weight:700;text-transform:uppercase;cursor:pointer;">Save Changes</button>
+    </div>
+    <p id="saveMsg" style="text-align:center;color:#4caf50;font-size:0.8rem;margin-top:0.75rem;display:none;">Prices saved! Pricing page updated.</p>
+  </div>
+</div>
+<script>
+const ADMIN_PASS='GURUDEV2026';
+const DEFAULT_PRICES={p1name:'Essentials',p1price:5000,p1desc:'Perfect for portraits and intimate moments.',p2name:'Signature',p2price:12000,p2desc:'Our most popular package for pre-wedding and events.',p3name:'Legacy',p3price:25000,p3desc:'Full-day coverage for weddings and grand celebrations.'};
+function openAdminPanel(){document.getElementById('adminOverlay').style.display='block';document.getElementById('adminPanel').style.display='block';document.getElementById('adminLogin').style.display='block';document.getElementById('pricingEditor').style.display='none';document.getElementById('adminPass').value='';document.getElementById('loginError').style.display='none';}
+function closeAdminPanel(){document.getElementById('adminOverlay').style.display='none';document.getElementById('adminPanel').style.display='none';}
+function checkAdminPass(){if(document.getElementById('adminPass').value===ADMIN_PASS){document.getElementById('adminLogin').style.display='none';document.getElementById('pricingEditor').style.display='block';loadPricingFields();}else{document.getElementById('loginError').style.display='block';}}
+function loadPricingFields(){const s=JSON.parse(localStorage.getItem('gurudevPricing')||'null')||DEFAULT_PRICES;['1','2','3'].forEach(i=>{document.getElementById('p'+i+'name').value=s['p'+i+'name'];document.getElementById('p'+i+'price').value=s['p'+i+'price'];document.getElementById('p'+i+'desc').value=s['p'+i+'desc'];});}
+function savePricing(){const d={};['1','2','3'].forEach(i=>{d['p'+i+'name']=document.getElementById('p'+i+'name').value;d['p'+i+'price']=parseInt(document.getElementById('p'+i+'price').value);d['p'+i+'desc']=document.getElementById('p'+i+'desc').value;});localStorage.setItem('gurudevPricing',JSON.stringify(d));const m=document.getElementById('saveMsg');m.style.display='block';setTimeout(()=>m.style.display='none',3000);}
+function resetPricing(){if(confirm('Reset prices to defaults?')){localStorage.removeItem('gurudevPricing');loadPricingFields();}}
+</script>
 </body></html>
