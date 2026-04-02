@@ -165,5 +165,25 @@ footer img{height:55px;filter:drop-shadow(0 0 6px rgba(212,175,55,.3))}
 <a href="index.html">Dashboard</a>
 </div>
 </footer>
-</body>
-</html>
+<script>
+(function(){
+  const D={p1name:'Essentials',p1price:5000,p1desc:'Perfect for intimate sessions and personal portraits.',p2name:'Signature',p2price:12000,p2desc:'Our most popular package for events and pre-wedding shoots.',p3name:'Legacy',p3price:25000,p3desc:'Full-day coverage for weddings and grand celebrations.'};
+  const p=JSON.parse(localStorage.getItem('gurudevPricing')||'null')||D;
+  const fmt=n=>Number(n).toLocaleString('en-IN');
+  const names=document.querySelectorAll('.plan-name');
+  const prices=document.querySelectorAll('.plan-price');
+  const descs=document.querySelectorAll('.plan-desc');
+  if(names[0])names[0].textContent=p.p1name;
+  if(prices[0])prices[0].innerHTML='<span>&#8377;</span>'+fmt(p.p1price);
+  if(descs[0])descs[0].textContent=p.p1desc;
+  if(names[1])names[1].textContent=p.p2name;
+  if(prices[1])prices[1].innerHTML='<span>&#8377;</span>'+fmt(p.p2price);
+  if(descs[1])descs[1].textContent=p.p2desc;
+  if(names[2])names[2].textContent=p.p3name;
+  if(prices[2])prices[2].innerHTML='<span>&#8377;</span>'+fmt(p.p3price);
+  if(descs[2])descs[2].textContent=p.p3desc;
+  const sel=document.getElementById('package');
+  if(sel&&sel.options.length>=4){sel.options[1].text=p.p1name+' Rs '+fmt(p.p1price);sel.options[2].text=p.p2name+' Rs '+fmt(p.p2price);sel.options[3].text=p.p3name+' Rs '+fmt(p.p3price);}
+})();
+</script>
+</body></html>
