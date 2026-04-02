@@ -1,15 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Book a photography session with Gurudev Photography by Surya Narayan Behera. Packages from Rs 5000. Bhadrak, Odisha."/>
 <title>Book a Session | Gurudev Photography | Bhadrak, Odisha</title>
-<meta name="description" content="Book a photography session with Gurudev Photography. Pricing packages from Rs 5000. Wedding, portrait and event photography in Bhadrak, Odisha."/>
-<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#131313;color:#e5e2e1;font-family:Manrope,sans-serif;min-height:100vh}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(19,19,19,.8);backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:space-between;padding:.75rem 3rem}
+nav img{height:55px;filter:drop-shadow(0 0 8px rgba(212,175,55,.4))}
+.nav-links{display:flex;gap:2rem}
+.nav-links a{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:#d0c5af;text-decoration:none;transition:color .3s}
+.nav-links a:hover,.nav-links a.active{color:#d4af37}
+.book-btn{background:linear-gradient(135deg,#f2ca50,#d4af37);color:#241a00;font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;border:none;padding:.75rem 1.5rem;border-radius:.5rem;cursor:pointer;text-decoration:none}
+.hero{padding:9rem 4rem 5rem;text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(212,175,55,.08),transparent 65%)}
+.eyebrow{font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:#d4af37;margin-bottom:1rem}
+h1{font-family:Noto Serif,serif;font-size:clamp(2.5rem,5vw,5rem);font-weight:300;margin-bottom:1rem}
+h1 em{color:#d4af37;font-style:italic}
+.subtitle{font-size:1rem;color:#d0c5af;max-width:500px;margin:0 auto;line-height:1.7}
+.pricing{max-width:1200px;margin:0 auto;padding:4rem 2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
+.card{background:#1c1b1b;border:1px solid rgba(153,144,124,.15);border-radius:1rem;padding:2.5rem;transition:transform .3s,border-color .3s;position:relative}
+.card:hover{transform:translateY(-6px);border-color:rgba(212,175,55,.3)}
+.card.featured{background:linear-gradient(160deg,#201e0a,#1c1b1b);border-color:rgba(212,175,55,.4)}
+.card.featured::before{content:"MOST POPULAR";position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#f2ca50,#d4af37);color:#241a00;font-size:.55rem;font-weight:700;letter-spacing:.2em;padding:.35rem 1rem;border-radius:0 0 .5rem .5rem}
+.plan-label{font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:#d4af37;margin-bottom:.5rem}
+.price{font-family:Noto Serif,serif;font-size:3.5rem;font-weight:300;line-height:1;margin-bottom:.25rem}
+.price span{font-size:1.25rem;color:#d0c5af}
+.plan-desc{font-size:.85rem;color:#d0c5af;margin-bottom:2rem;line-height:1.5}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(153,144,124,.3),transparent);margin-bottom:1.5rem}
+ul{list-style:none;margin-bottom:2rem}
+ul li{display:flex;align-items:center;gap:.75rem;padding:.5rem 0;font-size:.9rem;color:#d0c5af}
+ul li .material-symbols-outlined{font-size:1.1rem;color:#d4af37}
+.btn{display:block;text-align:center;text-decoration:none;padding:.85rem;border-radius:.5rem;font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;transition:all .2s}
+.btn-outline{border:1px solid rgba(212,175,55,.4);color:#d4af37;background:transparent}
+.btn-outline:hover{background:rgba(212,175,55,.08)}
+.btn-gold{background:linear-gradient(135deg,#f2ca50,#d4af37);color:#241a00}
+.btn-gold:hover{opacity:.85}
+.booking{background:#1c1b1b;padding:5rem 3rem}
+.booking-inner{max-width:1000px;margin:0 auto}
+.section-eyebrow{font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:#d4af37;margin-bottom:1rem}
+h2{font-family:Noto Serif,serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;margin-bottom:2.5rem}
+.form-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:3rem}
+.contact-list{display:flex;flex-direction:column;gap:1.5rem}
+.ci{display:flex;gap:1rem;align-items:flex-start}
+.ci .material-symbols-outlined{color:#d4af37;margin-top:.1rem}
+.ci-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:#99907c;margin-bottom:.2rem}
+.ci-value{font-family:Noto Serif,serif;font-size:1rem;color:#e5e2e1}
+form{display:flex;flex-direction:column;gap:1.25rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.field{display:flex;flex-direction:column;gap:.4rem}
+.field label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:#99907c}
+.field input,.field textarea,.field select{background:#2a2a2a;border:1px solid rgba(153,144,124,.15);border-radius:.5rem;padding:.8rem 1rem;color:#e5e2e1;font-family:Manrope,sans-serif;font-size:.9rem;outline:none;transition:border-color .3s}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:#d4af37}
+.field textarea{resize:vertical;min-height:110px}
+.submit{background:linear-gradient(135deg,#f2ca50,#d4af37);color:#241a00;border:none;border-radius:.5rem;padding:.9rem 2rem;font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;transition:opacity .2s}
+.submit:hover{opacity:.85}
+footer{background:#0e0e0e;padding:2.5rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(153,144,124,.1)}
+footer img{height:55px;filter:drop-shadow(0 0 6px rgba(212,175,55,.3))}
+.footer-text p{font-size:.75rem;color:#99907c}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:#99907c;text-decoration:none}
+.footer-links a:hover{color:#d4af37}
+</style>
 </head>
-<body style="background:#131313;color:#e5e2e1;font-family:sans-serif;padding:40px;text-align:center;">
-<h1 style="color:#d4af37;font-size:3rem;">Gurudev Photography</h1>
-<p style="color:#d4af37;">Book a Session - Bhadrak, Odisha</p>
-<p>Contact: +91 88474870066 | Suryabehera533@gmail.com</p>
-<a href="portfolio.html" style="color:#d4af37;">Back to Portfolio</a>
+<body>
+<nav>
+<a href="portfolio.html"><img src="logo.jpeg" alt="Gurudev Photography"/></a>
+<div class="nav-links">
+<a href="portfolio.html">Portfolio</a>
+<a href="gallery.html">Gallery</a>
+<a href="pricing.html" class="active">Pricing</a>
+<a href="portfolio.html#contact">Contact</a>
+</div>
+<a class="book-btn" href="#book">Book Now</a>
+</nav>
+<section class="hero">
+<p class="eyebrow">Investment in Memories</p>
+<h1>Book Your <em>Perfect</em> Session</h1>
+<p class="subtitle">Photography is more than an image — it is a legacy. Choose the experience that honors your story.</p>
+</section>
+<section>
+<div class="pricing">
+<div class="card">
+<p class="plan-label">Essentials</p>
+<div class="price"><span>Rs</span>5,000</div>
+<p class="plan-desc">Perfect for portraits and intimate moments.</p>
+<div class="divider"></div>
+<ul>
+<li><span class="material-symbols-outlined">schedule</span>1 Hour Session</li>
+<li><span class="material-symbols-outlined">photo_library</span>10 Retouched Photos</li>
+<li><span class="material-symbols-outlined">cloud_done</span>Online Gallery Access</li>
+<li><span class="material-symbols-outlined">download</span>Digital Downloads</li>
+</ul>
+<a href="#book" class="btn btn-outline">Enquire Now</a>
+</div>
+<div class="card featured">
+<p class="plan-label">Signature</p>
+<div class="price"><span>Rs</span>12,000</div>
+<p class="plan-desc">Our most popular package for pre-wedding and events.</p>
+<div class="divider"></div>
+<ul>
+<li><span class="material-symbols-outlined">schedule</span>3 Hour Session</li>
+<li><span class="material-symbols-outlined">auto_fix_high</span>30 Retouched Photos</li>
+<li><span class="material-symbols-outlined">movie</span>1 Digital Video Reel</li>
+<li><span class="material-symbols-outlined">cloud_done</span>Online Gallery Access</li>
+<li><span class="material-symbols-outlined">download</span>Digital Downloads</li>
+</ul>
+<a href="#book" class="btn btn-gold">Book This Package</a>
+</div>
+<div class="card">
+<p class="plan-label">Legacy</p>
+<div class="price"><span>Rs</span>25,000</div>
+<p class="plan-desc">Full-day coverage for weddings and grand celebrations.</p>
+<div class="divider"></div>
+<ul>
+<li><span class="material-symbols-outlined">hotel_class</span>Full Day — 8 Hours</li>
+<li><span class="material-symbols-outlined">verified</span>100 Retouched Photos</li>
+<li><span class="material-symbols-outlined">photo_prints</span>5 Physical Prints 8x10</li>
+<li><span class="material-symbols-outlined">video_library</span>3 Digital Video Reels</li>
+<li><span class="material-symbols-outlined">menu_book</span>Luxury Hardcover Album</li>
+</ul>
+<a href="#book" class="btn btn-outline">Enquire Now</a>
+</div>
+</div>
+</section>
+<section class="booking" id="book">
+<div class="booking-inner">
+<p class="section-eyebrow">Secure Your Date</p>
+<h2>Begin Your Story</h2>
+<div class="form-grid">
+<div class="contact-list">
+<div class="ci"><span class="material-symbols-outlined">call</span><div><p class="ci-label">Phone</p><p class="ci-value">+91 88474870066</p></div></div>
+<div class="ci"><span class="material-symbols-outlined">mail</span><div><p class="ci-label">Email</p><p class="ci-value">Suryabehera533@gmail.com</p></div></div>
+<div class="ci"><span class="material-symbols-outlined">location_on</span><div><p class="ci-label">Studio</p><p class="ci-value">Bhadrak, Odisha, India</p></div></div>
+</div>
+<form>
+<div class="row">
+<div class="field"><label for="n">Full Name</label><input id="n" type="text" placeholder="Your name"/></div>
+<div class="field"><label for="p">Phone</label><input id="p" type="tel" placeholder="+91 XXXXX XXXXX"/></div>
+</div>
+<div class="row">
+<div class="field"><label for="e">Email</label><input id="e" type="email" placeholder="your@email.com"/></div>
+<div class="field"><label for="d">Event Date</label><input id="d" type="date"/></div>
+</div>
+<div class="field"><label for="pkg">Package</label>
+<select id="pkg"><option value="">Select a package...</option><option>Essentials - Rs 5,000</option><option>Signature - Rs 12,000</option><option>Legacy - Rs 25,000</option><option>Custom / Enquire</option></select>
+</div>
+<div class="field"><label for="msg">Tell us about your event</label><textarea id="msg" placeholder="Describe your event, location and any special requests..."></textarea></div>
+<button type="submit" class="submit" onclick="alert('Thank you! Surya will contact you within 24 hours.')">Send Enquiry</button>
+</form>
+</div>
+</div>
+</section>
+<footer>
+<a href="portfolio.html"><img src="logo.jpeg" alt="Gurudev Photography"/></a>
+<div class="footer-text"><p>2024 Gurudev Photography by Surya Narayan Behera</p><p>Bhadrak, Odisha, India</p></div>
+<div class="footer-links">
+<a href="portfolio.html">Portfolio</a>
+<a href="gallery.html">Gallery</a>
+<a href="pricing.html">Pricing</a>
+<a href="index.html">Dashboard</a>
+</div>
+</footer>
 </body>
 </html>
