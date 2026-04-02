@@ -1,0 +1,11 @@
+{
+  "p1name": "Essentials",
+  "p1price": 5000,
+  "p1desc": "Perfect for intimate sessions and personal portraits.",
+  "p2name": "Signature",
+  "p2price": 12000,
+  "p2desc": "Our most popular package for events and pre-wedding shoots.",
+  "p3name": "Legacy",
+  "p3price": 25000,
+  "p3desc": "Full-day coverage for weddings and grand celebrations."
+}
