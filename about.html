@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="About Surya Narayan Behera - the eye behind Gurudev Photography. 10+ years capturing authentic moments in Bhadrak, Odisha."/>
+  <title>The Eye Behind the Lens | Gurudev Photography</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--bg:#131313;--surface:#1c1b1b;--surface-high:#2a2a2a;--surface-low:#0e0e0e;--gold:#d4af37;--gold-light:#f2ca50;--text:#e5e2e1;--text-muted:#d0c5af;--outline:#99907c;}
+    *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:'Manrope',sans-serif;min-height:100vh;overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(19,19,19,0.75);backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:space-between;padding:.75rem 3rem;}
+    .logo img{height:58px;width:auto;object-fit:contain;filter:drop-shadow(0 0 8px rgba(212,175,55,.4));}
+    .nav-links{display:flex;gap:2.5rem;align-items:center;}
+    .nav-links a{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;transition:color .3s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold);}
+    .book-btn{background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#241a00;font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;border:none;padding:.75rem 1.75rem;border-radius:.5rem;cursor:pointer;text-decoration:none;}
+    .hero{min-height:100vh;display:flex;align-items:flex-end;padding:0 4rem 6rem;position:relative;overflow:hidden;}
+    .hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,#0e0e0e 0%,#1a1508 40%,#131313 100%);}
+    .hero-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(212,175,55,.12) 0%,transparent 55%);}
+    .hero-content{position:relative;z-index:2;max-width:900px;}
+    .eyebrow{font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:.75rem;}
+    .eyebrow::before{content:'';display:inline-block;width:40px;height:1px;background:var(--gold);}
+    h1{font-family:'Noto Serif',serif;font-size:clamp(3.5rem,8vw,7rem);font-weight:300;line-height:1.05;margin-bottom:2rem;}
+    h1 em{color:var(--gold);font-style:italic;}
+    .hero-sub{font-size:1.05rem;color:var(--text-muted);max-width:550px;line-height:1.8;margin-bottom:3rem;}
+    .hero-cta{display:flex;gap:1.25rem;}
+    .btn-gold{background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#241a00;font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;border:none;padding:.85rem 2rem;border-radius:.5rem;cursor:pointer;text-decoration:none;}
+    .btn-ghost{border:1px solid rgba(212,175,55,.3);color:var(--gold);font-size:.65rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;padding:.85rem 2rem;border-radius:.5rem;text-decoration:none;}
+    .stats-section{background:var(--surface);padding:4rem;}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);max-width:1100px;margin:0 auto;}
+    .stat-item{text-align:center;padding:2rem;}
+    .stat-number{font-family:'Noto Serif',serif;font-size:3.5rem;font-weight:300;color:var(--gold);line-height:1;}
+    .stat-label{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);margin-top:.5rem;}
+    .bio-section{padding:7rem 4rem;max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
+    .bio-image-placeholder{width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,#2a2a2a,#1c1b1b);border-radius:.25rem;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;}
+    .bio-image-placeholder .material-symbols-outlined{font-size:4rem;color:var(--outline);}
+    .bio-image-placeholder p{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--outline);}
+    .bio-text .eyebrow-sm{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+    .bio-text h2{font-family:'Noto Serif',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;margin-bottom:1.5rem;}
+    .bio-text p{font-size:.95rem;color:var(--text-muted);line-height:1.9;margin-bottom:1.25rem;}
+    .philosophy-section{background:var(--surface);padding:7rem 4rem;}
+    .philosophy-inner{max-width:1200px;margin:0 auto;}
+    .section-header{margin-bottom:4rem;}
+    .section-header .eyebrow-sm{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+    .section-header h2{font-family:'Noto Serif',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;}
+    .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;}
+    .pillar{background:var(--surface-high);border-radius:.75rem;padding:2.5rem;}
+    .pillar .material-symbols-outlined{font-size:2.25rem;color:var(--gold);margin-bottom:1.25rem;display:block;}
+    .pillar h3{font-family:'Noto Serif',serif;font-size:1.35rem;font-weight:400;margin-bottom:.75rem;}
+    .pillar p{font-size:.875rem;color:var(--text-muted);line-height:1.75;}
+    .services-section{padding:7rem 4rem;max-width:1300px;margin:0 auto;}
+    .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;}
+    .service-card{background:var(--surface);border-radius:.75rem;padding:3rem;display:flex;gap:2rem;align-items:flex-start;}
+    .service-card .material-symbols-outlined{font-size:2rem;color:var(--gold);}
+    .service-title{font-family:'Noto Serif',serif;font-size:1.35rem;font-weight:400;margin-bottom:.5rem;}
+    .service-subtitle{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;}
+    .service-desc{font-size:.875rem;color:var(--text-muted);line-height:1.7;}
+    .cta-section{background:linear-gradient(160deg,#201e0a 0%,#131313 100%);padding:8rem 4rem;text-align:center;}
+    .cta-section h2{font-family:'Noto Serif',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:300;margin-bottom:1.5rem;}
+    .cta-section p{font-size:1rem;color:var(--text-muted);max-width:500px;margin:0 auto 3rem;line-height:1.8;}
+    .cta-buttons{display:flex;gap:1.25rem;justify-content:center;flex-wrap:wrap;}
+    footer{background:var(--surface-low);padding:3rem 4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;border-top:1px solid rgba(153,144,124,.1);}
+    .footer-logo img{height:55px;filter:drop-shadow(0 0 6px rgba(212,175,55,.3));}
+    .footer-info p{font-size:.75rem;color:var(--outline);}
+    .footer-links{display:flex;gap:2rem;}
+    .footer-links a{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--outline);text-decoration:none;}
+    .footer-links a:hover{color:var(--gold);}
+    @media(max-width:900px){nav{padding:.75rem 1.5rem;}.nav-links{display:none;}.hero{padding:5rem 1.5rem 4rem;min-height:80vh;}.stats-grid{grid-template-columns:repeat(2,1fr);}.bio-section{grid-template-columns:1fr;padding:4rem 1.5rem;}.philosophy-section,.services-section{padding:4rem 1.5rem;}.pillars-grid,.services-grid{grid-template-columns:1fr;}.cta-section{padding:5rem 1.5rem;}footer{flex-direction:column;text-align:center;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="portfolio.html"><img src="logo.jpeg" alt="Gurudev Photography"/></a>
+  <div class="nav-links">
+    <a href="portfolio.html">Portfolio</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html" class="active">About</a>
+    <a href="portfolio.html#contact">Contact</a>
+  </div>
+  <a class="book-btn" href="pricing.html#book">Book a Session</a>
+</nav>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="eyebrow">Our Story</p>
+    <h1>The Eye<br/>Behind the <em>Lens</em></h1>
+    <p class="hero-sub">More than photographs — artifacts of the soul. Every frame a chapter in the ongoing story of the lives we are privileged to witness.</p>
+    <div class="hero-cta">
+      <a href="#bio" class="btn-gold">Meet Surya</a>
+      <a href="pricing.html" class="btn-ghost">View Packages</a>
+    </div>
+  </div>
+</section>
+<section class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">Sessions Captured</div></div>
+    <div class="stat-item"><div class="stat-number">200+</div><div class="stat-label">Weddings Documented</div></div>
+    <div class="stat-item"><div class="stat-number">10+</div><div class="stat-label">Years of Practice</div></div>
+    <div class="stat-item"><div class="stat-number">5&#9733;</div><div class="stat-label">Client Rating</div></div>
+  </div>
+</section>
+<section class="bio-section" id="bio">
+  <div>
+    <div class="bio-image-placeholder">
+      <span class="material-symbols-outlined">person</span>
+      <p>Surya Narayan Behera</p>
+    </div>
+  </div>
+  <div class="bio-text">
+    <p class="eyebrow-sm">The Photographer</p>
+    <h2>Surya Narayan Behera</h2>
+    <p>Based in the heart of Bhadrak, Odisha, Surya Narayan Behera is more than a photographer — he is a visual storyteller who translates human emotion into timeless digital artifacts.</p>
+    <p>With over a decade of dedicated practice, Surya has developed a signature style characterized by atmospheric depth, authentic candid moments, and an uncanny ability to capture the quiet moments that define a legacy.</p>
+    <p>His work at Gurudev Photography reflects his core philosophy: every session is a unique, gallery-worthy masterpiece waiting to be curated. From grand wedding celebrations to intimate portraits, Surya approaches every frame with reverence.</p>
+    <div style="margin-top:2rem;display:flex;gap:1.5rem;flex-wrap:wrap;">
+      <div><p style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--outline);margin-bottom:.3rem;">Phone</p><p style="font-family:'Noto Serif',serif;">+91 88474870066</p></div>
+      <div><p style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--outline);margin-bottom:.3rem;">Email</p><p style="font-family:'Noto Serif',serif;">Suryabehera533@gmail.com</p></div>
+    </div>
+  </div>
+</section>
+<section class="philosophy-section">
+  <div class="philosophy-inner">
+    <div class="section-header"><p class="eyebrow-sm">Our Approach</p><h2>Three Pillars of Our Practice</h2></div>
+    <div class="pillars-grid">
+      <div class="pillar"><span class="material-symbols-outlined">favorite</span><h3>Authentic Moments</h3><p>Rejecting the staged for the soulful. We find the unscripted truth in every glance, gesture, and shared laugh that defines who you truly are.</p></div>
+      <div class="pillar"><span class="material-symbols-outlined">diamond</span><h3>Timeless Art</h3><p>Our imagery is crafted to withstand trends. Designed to be a family heirloom for generations, each photograph is a lasting artifact of your legacy.</p></div>
+      <div class="pillar"><span class="material-symbols-outlined">handshake</span><h3>Personal Connection</h3><p>We curate an experience tailored to your narrative. By building genuine rapport, we ensure authentic expression in every frame.</p></div>
+    </div>
+  </div>
+</section>
+<section class="services-section">
+  <div class="section-header" style="margin-bottom:3rem;"><p style="font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">What We Offer</p><h2 style="font-family:'Noto Serif',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;">Artistic Services</h2></div>
+  <div class="services-grid">
+    <div class="service-card"><span class="material-symbols-outlined">favorite</span><div><p class="service-subtitle">Grand Celebrations</p><h3 class="service-title">Wedding Photography</h3><p class="service-desc">Full-day documentation of your most important celebration. Every chapter of your story honored.</p></div></div>
+    <div class="service-card"><span class="material-symbols-outlined">movie</span><div><p class="service-subtitle">Cinematic Stories</p><h3 class="service-title">Pre-Wedding Shoots</h3><p class="service-desc">Editorial-style sessions capturing the anticipation and romance before the big day.</p></div></div>
+    <div class="service-card"><span class="material-symbols-outlined">person</span><div><p class="service-subtitle">Personal Branding</p><h3 class="service-title">Portrait Sessions</h3><p class="service-desc">Authentic portraits that reveal your true character — for professional or personal milestones.</p></div></div>
+    <div class="service-card"><span class="material-symbols-outlined">celebration</span><div><p class="service-subtitle">Corporate & Social</p><h3 class="service-title">Events & Ceremonies</h3><p class="service-desc">Comprehensive coverage of corporate, cultural, and social celebrations. Every moment documented.</p></div></div>
+  </div>
+</section>
+<section class="cta-section">
+  <p style="font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;">Limited Slots Available</p>
+  <h2>Ready to Curate<br/>Your <em style="color:var(--gold);font-style:italic;">Legacy?</em></h2>
+  <p>Limited sessions are available per season. Secure your date with Surya Narayan Behera and begin a collaboration that will last a lifetime.</p>
+  <div class="cta-buttons">
+    <a href="pricing.html" class="btn-gold">View Packages</a>
+    <a href="pricing.html#book" class="btn-ghost">Book a Session</a>
+  </div>
+</section>
+<footer>
+  <a class="footer-logo" href="portfolio.html"><img src="logo.jpeg" alt="Gurudev Photography"/></a>
+  <div class="footer-info"><p>&copy; 2024 Gurudev Photography by Surya Narayan Behera.</p><p>Bhadrak, Odisha, India</p></div>
+  <div class="footer-links">
+    <a href="portfolio.html">Portfolio</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html#contact">Contact</a>
+  </div>
+</footer>
+</body>
+</html>
