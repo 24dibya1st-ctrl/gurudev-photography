@@ -1,1 +1,373 @@
-<html class="dark" lang="en"><head>...
+<html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;700&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-container": "#474747",
+              "on-primary-container": "#554300",
+              "surface-bright": "#393939",
+              "on-secondary-container": "#b6b5b4",
+              "inverse-primary": "#735c00",
+              "on-secondary": "#303030",
+              "on-secondary-fixed": "#1b1c1c",
+              "surface": "#131313",
+              "on-error-container": "#ffdad6",
+              "on-tertiary": "#303130",
+              "surface-container-lowest": "#0e0e0e",
+              "on-primary-fixed": "#241a00",
+              "secondary": "#c8c6c5",
+              "inverse-surface": "#e5e2e1",
+              "surface-container-low": "#1c1b1b",
+              "outline-variant": "#4d4635",
+              "primary-container": "#d4af37",
+              "on-primary": "#3c2f00",
+              "on-background": "#e5e2e1",
+              "primary-fixed": "#ffe088",
+              "tertiary-fixed-dim": "#c7c6c4",
+              "on-error": "#690005",
+              "tertiary-container": "#b3b3b1",
+              "tertiary": "#cfcecc",
+              "primary-fixed-dim": "#e9c349",
+              "error-container": "#93000a",
+              "tertiary-fixed": "#e3e2e0",
+              "primary": "#f2ca50",
+              "on-tertiary-fixed": "#1b1c1b",
+              "surface-tint": "#e9c349",
+              "on-surface-variant": "#d0c5af",
+              "error": "#ffb4ab",
+              "on-secondary-fixed-variant": "#474747",
+              "outline": "#99907c",
+              "surface-container-highest": "#353534",
+              "surface-dim": "#131313",
+              "on-primary-fixed-variant": "#574500",
+              "secondary-fixed": "#e4e2e1",
+              "on-tertiary-container": "#444544",
+              "background": "#131313",
+              "surface-variant": "#353534",
+              "surface-container-high": "#2a2a2a",
+              "surface-container": "#201f1f",
+              "inverse-on-surface": "#313030",
+              "on-surface": "#e5e2e1",
+              "on-tertiary-fixed-variant": "#464746",
+              "secondary-fixed-dim": "#c8c6c5"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Manrope', sans-serif;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 150px 150px;
+            background-blend-mode: overlay;
+            opacity: 0.98;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 48px 100px -12px rgba(242, 202, 80, 0.06);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-zinc-950/60 backdrop-blur-xl flex justify-between items-center px-12 py-4 w-full">
+<a href="#" class="flex items-center">
+  <img src="logo.jpeg" alt="Gurudev Photography Logo" class="h-16 w-auto object-contain" style="filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));">
+</a>
+<div class="hidden md:flex gap-12 items-center">
+<a class="font-serif text-sm tracking-widest uppercase text-yellow-500 border-b border-yellow-500/30 pb-1 hover:text-yellow-400 transition-colors duration-300" href="#gallery">Gallery</a>
+<a class="font-serif text-sm tracking-widest uppercase text-zinc-400 hover:text-yellow-400 transition-colors duration-300" href="#events">Events</a>
+<a class="font-serif text-sm tracking-widest uppercase text-zinc-400 hover:text-yellow-400 transition-colors duration-300" href="#videos">Videos</a>
+<a class="font-serif text-sm tracking-widest uppercase text-zinc-400 hover:text-yellow-400 transition-colors duration-300" href="#contact">Contact</a>
+<a class="font-serif text-sm tracking-widest uppercase text-zinc-400 hover:text-yellow-400 transition-colors duration-300" href="index.html">Dashboard</a>
+</div>
+<button class="bg-primary px-8 py-3 rounded-xl text-on-primary font-label font-semibold tracking-wide text-xs uppercase hover:bg-primary-fixed-dim transition-all active:scale-95 duration-200">
+            Book Session
+        </button>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Cinematic photography background" class="w-full h-full object-cover grayscale opacity-40" data-alt="Cinematic wide shot of a misty mountain range at dawn with high contrast black and white tones and soft light beams" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLvzSBPIOxgRFpHhOt5SjZQRR4EsKDK6HgRB-MVkhEDBS_onpJbv7oTKIy2SjJZUSrUshY-WuR99BoWRDdyP6AJYbPnwJUHM0ONBT4vSelT8GYNYG6sfSBhJGn6sWc5uj_D3SNdvOPrYf4OcOFd8YQiT0TqqaTcEFLcEVPe-vAbXPbE-2CUzB-c6lw6yuWGdRzOu9R5SoR_Lo45JThEusu_ByaNss3IyutCA6YMM12MT5R539vc3EYflQt2HXSvPX-d2UdEL24aDQ">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-5xl">
+<span class="font-label text-primary tracking-[0.4em] uppercase text-[10px] mb-8 block opacity-80">Surya Narayan Behera presents</span>
+<h1 class="font-headline text-5xl md:text-8xl text-on-surface leading-tight tracking-tight mb-8">
+                Capturing the <span class="italic text-primary-container">Soul</span> of the Moment
+            </h1>
+<p class="font-body text-on-surface-variant max-w-xl mx-auto text-lg font-light leading-relaxed">
+                Fine art photography that transcends the visual, documenting the profound emotions of life’s most significant chapters.
+            </p>
+<div class="mt-12 flex justify-center gap-6">
+<div class="w-px h-24 bg-gradient-to-b from-primary/0 to-primary"></div>
+</div>
+</div>
+</header>
+<!-- Gallery Section (Asymmetric / Bento Grid) -->
+<section class="py-32 px-12 bg-surface" id="gallery">
+<div class="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="font-label text-primary tracking-widest uppercase text-xs">The Archives</span>
+<h2 class="font-headline text-4xl md:text-6xl text-on-surface mt-4">Selected Works</h2>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2 rounded-full bg-primary-container text-on-primary-container text-xs font-label uppercase tracking-widest">All</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-label uppercase tracking-widest hover:text-on-surface transition-all">Weddings</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-label uppercase tracking-widest hover:text-on-surface transition-all">Nature</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
+<div class="md:col-span-8 md:row-span-2 relative group overflow-hidden">
+<img alt="Wedding ceremony" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close-up of a bride's hands holding a bouquet of white roses with soft morning sunlight catching the delicate lace of her gown" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATAJSi9SS0O4cp46phojI2ZquAMb6Cv2w1JZ76iwiPIzONyX3J-HlCrIkYh6XAv36M-6BPCQEBDZkxxrM2VUWUf6S0YNeXEHjn_4GZFqTWvy4H1FVCv6gEqo-Dg6TnCSz0CPR7XRv8lfPApTT3Y1dB90co2H8Ln5aXqyS3hmv-C9J-S438BC6OGV5cT2jJTN8Y8H87TQ0yp7UHg_LpFnHyUb8MUqzaizA00_-7DNCiUhh_88NufdhnL5uTbzhqxFGoS_XW1KOcvyE">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-12">
+<p class="font-headline text-2xl text-white">Ethereal Unions</p>
+</div>
+</div>
+<div class="md:col-span-4 md:row-span-1 relative group overflow-hidden">
+<img alt="Nature landscape" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Majestic peak of a jagged mountain during sunset with deep orange sky and dark silhouettes of pine trees in the foreground" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbJrvk_sbyWpmmb_ndOs5rwQ71tD7gOwYQ3H33YKw-18M6WsE0ObZGsJwNwQ5JxPZRRGSb9oUjGnQKpf5qEB5oxTynSF871iYfAaeXj_9Ph-B5aRlvMzrfCfHlNkRTTeq0zQgOooxdPtiOPiXH3bo3jndWpZCJEbtINxz7EGgYPoaer1xXB9CEwiiXlM2gU5i3s4MA6frcYCqCaBxxqFx4q_7DXC_96gxwG8hZFsojJa_YxCCVXzsL02YIyogwqLiOk5VW6JZ2Gyk">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+<p class="font-headline text-xl text-white">Silent Peaks</p>
+</div>
+</div>
+<div class="md:col-span-4 md:row-span-2 relative group overflow-hidden">
+<img alt="Portrait" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A striking portrait of an elderly man with deep wrinkles, captured in dramatic side-lighting against a dark charcoal wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiPQwpVFy1LrsYZu2MrgEsCAaR9Xk04YZbSBd4mDx9NMC324tOJsKUAEBL_v5T8daou7QryRxH2xjbpLlA_l3LqEXjAS4uFs_Q6My-o7aL_9lkzY-qFLoROZC66c4VcFnbbzYtXKb51gO_1g5fGnGuOy8kzeN7bKxhI9KgwA1NFhoIGMdk6WdtrRUXRjduFUA90fLmc6fg8MpQMXCCcqvm3CWEeFzm1rC5WhL_dB6AzX8t81TeKX_aNF_70J6MijW8c0qcOoSskQI">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+<p class="font-headline text-xl text-white">Human Narrative</p>
+</div>
+</div>
+<div class="md:col-span-4 md:row-span-1 relative group overflow-hidden">
+<img alt="City architecture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern architectural lines of a glass building in Paris with a golden sunset reflecting off the structured panels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu-23qljORnEJunHbTbGicVcgR_bldqF-H-yncXrzKSBH9A7CQaT-xbyj3am1mkX0-lBacxLilNusOBnnzgu7Vo96QpV4eRJ1p-YEf1pORulhljD6fvLm9Zc-kDkEO1cKrlSUYFvVcftII7lFcsH9HUQ13MrqXR3-FR-e2_LI488bfHX7JJqBLtHo6XeGugE3wV46EK9YNM42ihHlMtw9pB4qnWH7tcuQ_irzfwYrtNS6CfVdOvQJ89_UBEl_N15ud_QCiy2rG8zE">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+<p class="font-headline text-xl text-white">Urban Geometry</p>
+</div>
+</div>
+<div class="md:col-span-4 md:row-span-1 relative group overflow-hidden">
+<img alt="Macro photography" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Extreme close-up of a single water droplet on a dark leaf, refracting a forest landscape inside the sphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTNvIQLyt9Lo8KhgFD1JccK4bRBUpMv-oE0UP4Z0htt8HJtN163w-DGB7042TlkRN2suc52UZrbF2D_qA9m5ENHbZXPdqScDTk4-HFw5xl-ldN_MzL9EkrtfmVXYN3dUwZYGRyb896PJCXBZBXY5h58tZrZvy3df9cnaFqMCiAIjSBf1npLsDOmualStjphQaIEi6QlZnVbdhV4OkNB0ezUr8qa3TeLMO_pAWnMB2eYjAbXYTCOA5FMHve-PjcKFEEcLsEpFbfGUs">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+<p class="font-headline text-xl text-white">Micro Worlds</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Events Section (Shift in Background) -->
+<section class="py-32 px-12 bg-surface-container-low" id="events">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20 text-center">
+<span class="font-label text-primary tracking-widest uppercase text-xs">Live Coverage</span>
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface mt-4">Evening Chronicles</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Event Card 1 -->
+<div class="group">
+<div class="relative overflow-hidden mb-6 aspect-[4/5]">
+<img alt="Gala Event" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Sophisticated black-tie gala event with warm glowing chandeliers and guests in elegant attire blurred in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYSvuumcasMVEQPytMMt0icLnX6_P_uB58ZE1RICLyCMaNpi4eS6m31j5lryiexet9Sc5jbiIUh4jUqOYV9jZlhTLQ51vcm1syyVQM0wBMG4tdhiss8lifDK9Q25rBg_I3UrDp_dSslvouyN7jqGYV06_amWLie2wr2Eg9eb-Hjih_STG5YbZE-R8OPykge-tUX-0X2NhHiFUXlCWlJxJvpUCdeMJ6BlyDCZRROavuWilkObFXIe-8PtA0QnJUTTB4zGjqRzh--r8">
+<div class="absolute top-4 left-4 bg-primary px-3 py-1 text-[10px] font-label text-on-primary tracking-tighter uppercase">Oct 2024</div>
+</div>
+<h3 class="font-headline text-xl text-on-surface mb-2">The Golden Gala</h3>
+<p class="font-body text-on-surface-variant text-sm font-light leading-relaxed">
+                        An evening of cinematic elegance at the Royal Pavilion, capturing candid interactions amidst golden light.
+                    </p>
+</div>
+<!-- Event Card 2 -->
+<div class="group">
+<div class="relative overflow-hidden mb-6 aspect-[4/5]">
+<img alt="Music Event" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Atmospheric shot of a live concert stage with deep blue and magenta lighting and silhouettes of the cheering crowd" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUYx1588gxtCM1l0YSmoHmKhLZDO5hxBtTpmUrLRXKpCPN9QdFBRGJbP2kWOZ8Bn87swkDhFQJnvu8WW0ADTr_rFxfOqUbcu3t05eeoDm7ko7T-VwBcJDjGJ0APJmA-sEr4tZ2PLmk2di29iO2wu4JuLTiE9tNtUzL0Y_ToodixcIz0JMjvD6MrJNXHQ5toq6pSSkcCIYP8w4NidpwoQpv2l3qroW4nqf9cyObcp1xXFPruvQo5FsQVNYxr6HoEdJ9zpJRtLkZLT4">
+<div class="absolute top-4 left-4 bg-primary px-3 py-1 text-[10px] font-label text-on-primary tracking-tighter uppercase">Sep 2024</div>
+</div>
+<h3 class="font-headline text-xl text-on-surface mb-2">Symphony in Blue</h3>
+<p class="font-body text-on-surface-variant text-sm font-light leading-relaxed">
+                        High-energy performance photography capturing the raw emotion and movement of live orchestral fusion.
+                    </p>
+</div>
+<!-- Event Card 3 -->
+<div class="group">
+<div class="relative overflow-hidden mb-6 aspect-[4/5]">
+<img alt="Corporate Summit" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern corporate boardroom meeting with glass walls and professional subjects in deep focus under cool artificial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVTy28c3Qr30bBUhu-C1JpYfyoQQv8G8FW9hJlGWSwCnwt7ymRyQQ-zHzYGL7Fc76WujHV5OPdwb68aQ2zIC3iOlBJ9y3bDxH453KC65hU43inmLehF7tIafSxGd8FDF0D9VqH-QiCECwY_4hMMjrpKmw-xVvXSNgfYyxfxivxRYW30SqTtZ0PKhrhPsZrrQXalJq4eTTtoEjmuybQiefgLxiqiFAyng6iToRCUwFijs1S8b7geyryxME1OIAZo2fwPgwQMpe3Pko">
+<div class="absolute top-4 left-4 bg-primary px-3 py-1 text-[10px] font-label text-on-primary tracking-tighter uppercase">Aug 2024</div>
+</div>
+<h3 class="font-headline text-xl text-on-surface mb-2">Visionary Summit</h3>
+<p class="font-body text-on-surface-variant text-sm font-light leading-relaxed">
+                        Professional documentary-style coverage of international leadership forums and keynote sessions.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Video Portfolio -->
+<section class="py-32 px-12 bg-surface" id="videos">
+<div class="flex flex-col md:flex-row items-baseline gap-6 mb-20">
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface">Moving Frames</h2>
+<p class="font-body text-primary text-sm tracking-widest uppercase">Cinematography</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="relative group cursor-pointer overflow-hidden aspect-video">
+<img alt="Cinematography Thumbnail" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-50" data-alt="Moody cinematic frame of a classic black car driving through a rain-slicked city street at night with neon lights reflecting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4s782qkn0kSjA_rtP56AQTcR3duaGch3msiYalVxkYdNpPrSirQzSebUEkGSuBC1LKAtlVeCYyE1E88IKiLgBbwfy9os0LDcQBWnkvLhT0s38eeh49Ia62BcXOBspEnXwOQxm15uwci7_bIJwvMf73X4gkOt60REdL3xA19u2a1izQlomv5O6atXPRXYiTviCXuil1Jw3Y03xq5oGdh7TeOWLYzZi2pgsJCiU8LJYlt5sZEE6fSpfhJFzm5vbSvGbRHHf_grcQxk">
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-20 h-20 rounded-full border border-primary/40 flex items-center justify-center transition-all duration-500 group-hover:bg-primary/20 group-hover:scale-110">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-8 left-8">
+<h4 class="font-headline text-2xl text-white">The Midnight Drive</h4>
+<p class="font-body text-on-surface/60 text-xs tracking-widest uppercase mt-2">Short Film / 2024</p>
+</div>
+</div>
+<div class="relative group cursor-pointer overflow-hidden aspect-video">
+<img alt="Cinematography Thumbnail" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-50" data-alt="Stylized slow-motion shot of steam rising from a gourmet dish being prepared in a dimly lit professional kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfW3VLetk4uJnJC_hq16KNgZvyKKJB-Zf4O7fbaD1PIjxup1xUZ1P3cHIyavaEBn4TM2RyTxjYmYUyhZNWEzAjE6zmP7YMMOyMIIP7xfNWXVLUzihkaJrytbGX08NadpwdSwm7Nm2OhpbWXvgdML_SMFDwfCDxrDFPrtRWTfTKLEks_hSAXViEBtOv_HQ_wL8Lp8U--f53dSqkNkTPevtsMoBdvntBb4m5YMXJR4yK3DcQyTezX5ijOt35mRokNO-ALE6HDK7SxQo">
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-20 h-20 rounded-full border border-primary/40 flex items-center justify-center transition-all duration-500 group-hover:bg-primary/20 group-hover:scale-110">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-8 left-8">
+<h4 class="font-headline text-2xl text-white">Culinary Arts</h4>
+<p class="font-body text-on-surface/60 text-xs tracking-widest uppercase mt-2">Commercial / 2024</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Client Testimonials Section -->
+<section class="py-32 px-12 bg-surface" id="testimonials">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20">
+<span class="font-label text-primary tracking-widest uppercase text-xs">Kind Words</span>
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface mt-4">Voices of Experience</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Testimonial 1 -->
+<div class="border-l border-primary-container/20 pl-8 py-4 group">
+<span class="material-symbols-outlined text-primary-container/40 mb-6 text-4xl block font-light">format_quote</span>
+<p class="font-headline text-xl text-on-surface mb-8 italic leading-relaxed font-light">
+                    "Surya doesn't just take photos; he captures the silent language of emotion. Our wedding album feels like a cinematic masterpiece we live through every time we open it."
+                </p>
+<div class="flex items-center gap-4">
+<div class="h-px w-8 bg-primary"></div>
+<div>
+<p class="font-label text-sm text-on-surface font-semibold tracking-wide">Eleanor &amp; James</p>
+<p class="font-body text-[10px] text-primary tracking-widest uppercase">London, UK</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="border-l border-primary-container/20 pl-8 py-4 group">
+<span class="material-symbols-outlined text-primary-container/40 mb-6 text-4xl block font-light">format_quote</span>
+<p class="font-headline text-xl text-on-surface mb-8 italic leading-relaxed font-light">
+                    "The level of professionalism and artistic vision displayed during our corporate summit was unparalleled. The results were sophisticated and perfectly aligned with our brand."
+                </p>
+<div class="flex items-center gap-4">
+<div class="h-px w-8 bg-primary"></div>
+<div>
+<p class="font-label text-sm text-on-surface font-semibold tracking-wide">Marcus Thorne</p>
+<p class="font-body text-[10px] text-primary tracking-widest uppercase">CEO, Nexa Global</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="border-l border-primary-container/20 pl-8 py-4 group">
+<span class="material-symbols-outlined text-primary-container/40 mb-6 text-4xl block font-light">format_quote</span>
+<p class="font-headline text-xl text-on-surface mb-8 italic leading-relaxed font-light">
+                    "I've never felt more comfortable in front of a lens. Surya has a unique gift for finding the truth in a portrait. Simply breathtaking work."
+                </p>
+<div class="flex items-center gap-4">
+<div class="h-px w-8 bg-primary"></div>
+<div>
+<p class="font-label text-sm text-on-surface font-semibold tracking-wide">Saritha Rao</p>
+<p class="font-body text-[10px] text-primary tracking-widest uppercase">Classical Dancer</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 px-12 bg-surface-container-low" id="contact">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24">
+<div>
+<span class="font-label text-primary tracking-widest uppercase text-xs">Get in Touch</span>
+<h2 class="font-headline text-4xl md:text-6xl text-on-surface mt-6 mb-12">Let's craft your story.</h2>
+<div class="space-y-12">
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined text-primary">mail</span>
+<div>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-1">Inquiries</p>
+<p class="font-headline text-xl text-on-surface">Suryabehera533@gmail.com</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-1">Studio</p>
+<p class="font-headline text-xl text-on-surface">Bhadrak, Odisha</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined text-primary">call</span>
+<div>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-1">Contact</p>
+<p class="font-headline text-xl text-on-surface">+91 88474870066</p>
+</div>
+</div>
+</div>
+</div>
+<form class="space-y-10 bg-surface p-12 editorial-shadow">
+<div>
+<label class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant block mb-4">Full Name</label>
+<input class="w-full bg-transparent border-b border-outline/30 focus:border-primary focus:ring-0 text-on-surface py-3 outline-none transition-all placeholder:text-surface-variant" placeholder="Johnathan Doe" type="text">
+</div>
+<div>
+<label class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant block mb-4">Email Address</label>
+<input class="w-full bg-transparent border-b border-outline/30 focus:border-primary focus:ring-0 text-on-surface py-3 outline-none transition-all placeholder:text-surface-variant" placeholder="john@example.com" type="email">
+</div>
+<div>
+<label class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant block mb-4">Message</label>
+<textarea class="w-full bg-transparent border-b border-outline/30 focus:border-primary focus:ring-0 text-on-surface py-3 outline-none transition-all placeholder:text-surface-variant" placeholder="Tell me about your project..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 rounded-xl font-label text-xs uppercase tracking-widest font-bold hover:bg-primary-fixed-dim transition-colors" type="submit">
+                    Send Inquiry
+                </button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-zinc-950 w-full py-16 px-12 border-t border-zinc-900/50 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<img src="logo.jpeg" alt="Gurudev Photography" class="h-20 w-auto object-contain mb-2" style="filter: drop-shadow(0 0 6px rgba(212,175,55,0.3));">
+<p class="font-sans text-xs tracking-widest uppercase text-zinc-500">© 2024 Gurudev Photography by Surya Narayan Behera. All rights reserved.</p>
+<p class="font-sans text-xs tracking-widest uppercase text-zinc-600">Bhadrak, Odisha, India</p>
+</div>
+<div class="flex gap-10">
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 hover:text-zinc-100 transition-all opacity-80 hover:opacity-100" href="#">Instagram</a>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 hover:text-zinc-100 transition-all opacity-80 hover:opacity-100" href="#">Vimeo</a>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 hover:text-zinc-100 transition-all opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="font-sans text-xs tracking-widest uppercase text-zinc-500 hover:text-zinc-100 transition-all opacity-80 hover:opacity-100" href="#">Email</a>
+<a class="font-sans text-xs tracking-widest uppercase text-yellow-600 hover:text-yellow-400 transition-all opacity-80 hover:opacity-100" href="index.html">Dashboard</a>
+</div>
+</footer>
+</body></html>
