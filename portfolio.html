@@ -3,147 +3,219 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Gurudev Photography by Surya Narayan Behera - Premium wedding, portrait and event photography in Bhadrak, Odisha. Book your session today."/>
+  <meta name="description" content="Gurudev Photography by Surya Narayan Behera – Premium wedding, portrait and event photography in Bhadrak, Odisha. Book your session today."/>
   <meta name="keywords" content="Gurudev Photography, wedding photographer Bhadrak, Odisha photographer, Surya Narayan Behera, portrait photography"/>
   <meta name="author" content="Surya Narayan Behera"/>
+  <meta property="og:title" content="Gurudev Photography | Bhadrak, Odisha"/>
+  <meta property="og:description" content="Premium photography by Surya Narayan Behera. Weddings, portraits, events."/>
   <title>Gurudev Photography | Surya Narayan Behera | Bhadrak, Odisha</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap" rel="stylesheet"/>
   <style>
-    :root{--bg:#0a0a0a;--surface:#141414;--surface2:#1e1e1e;--gold:#ffd700;--gold2:#e6c200;--text:#f0efee;--muted:#a09888;}
-    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
-    body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;overflow-x:hidden;}
-    .cursor{position:fixed;width:12px;height:12px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;}
-    .cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid var(--gold);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .12s ease-out;}
-    nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:.9rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:all .4s;}
-    nav.scrolled{background:rgba(10,10,10,.92);backdrop-filter:blur(20px);padding:.65rem 3rem;box-shadow:0 2px 30px rgba(0,0,0,.5);}
-    .nav-logo img{height:52px;object-fit:contain;filter:drop-shadow(0 0 8px rgba(255,215,0,.35));}
-    .nav-links{display:flex;align-items:center;gap:2.5rem;}
-    .nav-links a{font-size:.72rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:rgba(240,239,238,.75);text-decoration:none;transition:color .3s;position:relative;}
-    .nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:100%;height:1px;background:var(--gold);transition:right .3s;}
-    .nav-links a:hover{color:var(--gold);}.nav-links a:hover::after{right:0;}
-    .nav-book{background:var(--gold);color:#000;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.65rem 1.75rem;border-radius:2rem;text-decoration:none;transition:all .2s;}
-    .nav-book:hover{background:var(--gold2);transform:translateY(-2px);}
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
-    .hamburger span{width:24px;height:2px;background:var(--text);border-radius:2px;}
-    .mobile-nav{display:none;position:fixed;inset:0;background:rgba(10,10,10,.97);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;}
-    .mobile-nav.open{display:flex;}
-    .mobile-nav a{font-size:1.5rem;font-weight:300;letter-spacing:.1em;text-transform:uppercase;color:var(--text);text-decoration:none;}
-    .mobile-nav a:hover{color:var(--gold);}
-    .close-nav{position:absolute;top:1.5rem;right:2rem;font-size:2rem;color:var(--text);cursor:pointer;background:none;border:none;}
-    .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-    .hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0a0a0a 0%,#1a1005 40%,#0a0a0a 100%);}
-    .hero-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(255,215,0,.1) 0%,transparent 60%);}
-    .hero-particles{position:absolute;inset:0;overflow:hidden;}
-    .hero-particles span{position:absolute;width:2px;height:2px;background:var(--gold);border-radius:50%;animation:float-particle linear infinite;opacity:0;}
-    @keyframes float-particle{0%{opacity:0;transform:translateY(100vh) scale(0)}10%{opacity:.6}90%{opacity:.3}100%{opacity:0;transform:translateY(-10vh) scale(1)}}
-    .hero-content{position:relative;z-index:2;text-align:center;padding:2rem;max-width:900px;}
-    .hero-eyebrow{font-size:.7rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;animation:fadeUp .8s ease both;}
-    .hero-title{font-family:'Noto Serif',serif;font-size:clamp(3rem,8vw,6.5rem);font-weight:300;line-height:1.08;margin-bottom:1.5rem;animation:fadeUp .8s .15s ease both;}
-    .hero-title em{color:var(--gold);font-style:italic;}
-    .hero-sub{font-size:1rem;color:var(--muted);line-height:1.8;max-width:520px;margin:0 auto 3rem;animation:fadeUp .8s .3s ease both;}
-    .hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeUp .8s .45s ease both;}
-    .btn-primary{background:var(--gold);color:#000;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.9rem 2.25rem;border-radius:2rem;text-decoration:none;transition:all .25s;}
-    .btn-primary:hover{background:var(--gold2);transform:translateY(-3px);box-shadow:0 8px 30px rgba(255,215,0,.35);}
-    .btn-outline{border:1.5px solid rgba(255,215,0,.5);color:var(--gold);font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.9rem 2.25rem;border-radius:2rem;text-decoration:none;transition:all .25s;}
-    .btn-outline:hover{background:rgba(255,215,0,.08);transform:translateY(-3px);}
-    .scroll-hint{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--muted);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;animation:bounce 2s infinite;}
-    @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-    .section-label{font-size:.65rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;display:flex;align-items:center;gap:.75rem;}
-    .section-label::before{content:'';display:inline-block;width:30px;height:1px;background:var(--gold);}
-    .section-title{font-family:'Noto Serif',serif;font-size:clamp(1.75rem,4vw,3rem);font-weight:300;margin-bottom:1rem;}
-    .section-title em{color:var(--gold);font-style:italic;}
-    .portfolio-section{padding:7rem 3rem;}
-    .portfolio-inner{max-width:1400px;margin:0 auto;}
-    .portfolio-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:wrap;gap:1rem;}
-    .category-tabs{display:flex;gap:.5rem;flex-wrap:wrap;}
-    .tab{background:var(--surface2);border:1px solid rgba(255,215,0,.1);color:var(--muted);font-family:'Poppins',sans-serif;font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:.55rem 1.25rem;border-radius:2rem;cursor:pointer;transition:all .25s;}
-    .tab.active,.tab:hover{background:var(--gold);color:#000;border-color:var(--gold);}
-    .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
-    .photo-card{position:relative;overflow:hidden;border-radius:.5rem;aspect-ratio:3/4;background:var(--surface);cursor:pointer;}
-    .photo-card.wide{aspect-ratio:4/3;}
-    .photo-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.8) 0%,transparent 50%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:1.5rem;}
-    .photo-card:hover .photo-overlay{opacity:1;}
-    .photo-label{font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);}
-    .photo-caption{font-size:.8rem;color:rgba(255,255,255,.8);}
-    .photo-placeholder{width:100%;height:100%;background:linear-gradient(135deg,#1e1e1e,#2a2a1a);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;}
-    .photo-placeholder .material-symbols-outlined{font-size:3rem;color:rgba(255,215,0,.3);}
-    .photo-placeholder span:last-child{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,215,0,.4);}
-    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:2000;display:none;align-items:center;justify-content:center;}
-    .lightbox.open{display:flex;}
-    .lightbox-content{position:relative;max-width:90vw;max-height:90vh;}
-    .lightbox-img{max-width:90vw;max-height:85vh;border-radius:.5rem;object-fit:contain;}
-    .lightbox-close{position:absolute;top:-2.5rem;right:0;background:none;border:none;color:var(--gold);font-size:2rem;cursor:pointer;}
-    .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,215,0,.15);border:1px solid rgba(255,215,0,.3);color:var(--gold);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;}
-    .lightbox-nav:hover{background:rgba(255,215,0,.3);}
-    .lightbox-prev{left:-3.5rem;}.lightbox-next{right:-3.5rem;}
-    .reels-section{background:var(--surface);padding:7rem 3rem;}
-    .reels-inner{max-width:1400px;margin:0 auto;}
-    .reels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
-    .reel-card{background:var(--surface2);border-radius:.75rem;overflow:hidden;position:relative;aspect-ratio:9/16;cursor:pointer;transition:transform .3s;}
-    .reel-card:hover{transform:translateY(-6px);}
-    .reel-placeholder{width:100%;height:100%;background:linear-gradient(160deg,#1e1e1e,#2a2a1a);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;}
-    .reel-play{width:56px;height:56px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .2s,box-shadow .2s;}
-    .reel-card:hover .reel-play{transform:scale(1.1);box-shadow:0 0 30px rgba(255,215,0,.4);}
-    .reel-play .material-symbols-outlined{font-size:1.75rem;color:#000;}
-    .reel-title{font-size:.75rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);}
-    .reel-badge{position:absolute;top:1rem;left:1rem;background:var(--gold);color:#000;font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .7rem;border-radius:2rem;}
-    .stats-section{padding:5rem 3rem;border-top:1px solid rgba(255,215,0,.08);border-bottom:1px solid rgba(255,215,0,.08);}
-    .stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;}
-    .stat{text-align:center;}
-    .stat-num{font-family:'Noto Serif',serif;font-size:3.5rem;font-weight:300;color:var(--gold);line-height:1;}
-    .stat-lbl{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:.5rem;}
-    .about-strip{padding:7rem 3rem;max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
-    .about-image{aspect-ratio:3/4;background:linear-gradient(135deg,#1e1e1e,#2a2a1a);border-radius:.5rem;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;}
-    .about-image .material-symbols-outlined{font-size:5rem;color:rgba(255,215,0,.25);}
-    .about-text h2{font-family:'Noto Serif',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;margin-bottom:1.5rem;}
-    .about-text h2 em{color:var(--gold);font-style:italic;}
-    .about-text p{font-size:.925rem;color:var(--muted);line-height:1.9;margin-bottom:1.25rem;}
-    .contact-section{background:var(--surface);padding:7rem 3rem;}
-    .contact-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.5fr;gap:5rem;align-items:start;}
-    .contact-info{display:flex;flex-direction:column;gap:2rem;}
-    .cinfo-item{display:flex;align-items:flex-start;gap:1.25rem;}
-    .cinfo-icon{width:48px;height:48px;border-radius:50%;background:rgba(255,215,0,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-    .cinfo-icon .material-symbols-outlined{color:var(--gold);font-size:1.25rem;}
-    .cinfo-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.25rem;}
-    .cinfo-value{font-size:1rem;color:var(--text);}
-    .cinfo-value a{color:var(--text);text-decoration:none;transition:color .3s;}
-    .cinfo-value a:hover{color:var(--gold);}
-    .contact-form{display:flex;flex-direction:column;gap:1.25rem;}
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
-    .field{display:flex;flex-direction:column;gap:.4rem;}
-    .field label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);}
-    .field input,.field textarea,.field select{background:var(--surface2);border:1px solid rgba(255,215,0,.12);border-radius:.5rem;padding:.85rem 1rem;color:var(--text);font-family:'Poppins',sans-serif;font-size:.875rem;outline:none;transition:border-color .3s;}
-    .field input:focus,.field textarea:focus,.field select:focus{border-color:var(--gold);}
-    .field input::placeholder,.field textarea::placeholder{color:rgba(160,152,136,.4);}
-    .field textarea{resize:vertical;min-height:120px;}
-    .field select option{background:var(--surface2);}
-    .submit-btn{background:var(--gold);color:#000;border:none;border-radius:2rem;padding:1rem 2.5rem;font-family:'Poppins',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;align-self:flex-start;transition:all .25s;}
-    .submit-btn:hover{background:var(--gold2);transform:translateY(-2px);}
-    .whatsapp-float{position:fixed;bottom:2rem;right:2rem;z-index:900;width:58px;height:58px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);text-decoration:none;animation:wa-pulse 2.5s infinite;transition:transform .2s;}
-    .whatsapp-float:hover{transform:scale(1.12);}
-    .whatsapp-float svg{width:30px;height:30px;fill:white;}
-    @keyframes wa-pulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 35px rgba(37,211,102,.7)}}
-    footer{background:#050505;padding:3.5rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;border-top:1px solid rgba(255,215,0,.08);}
-    .footer-info p{font-size:.75rem;color:var(--muted);}
-    .footer-links{display:flex;gap:2rem;flex-wrap:wrap;}
-    .footer-links a{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s;}
-    .footer-links a:hover{color:var(--gold);}
-    .reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease;}
-    .reveal.visible{opacity:1;transform:translateY(0);}
-    .reveal-delay-1{transition-delay:.1s;}.reveal-delay-2{transition-delay:.2s;}.reveal-delay-3{transition-delay:.3s;}
-    @media(max-width:900px){nav{padding:.75rem 1.5rem;}.nav-links,.nav-book{display:none;}.hamburger{display:flex;}.portfolio-grid{grid-template-columns:1fr 1fr;}.reels-grid{grid-template-columns:1fr 1fr;}.stats-inner{grid-template-columns:repeat(2,1fr);}.about-strip{grid-template-columns:1fr;gap:3rem;padding:4rem 1.5rem;}.contact-inner{grid-template-columns:1fr;gap:3rem;}.contact-section,.reels-section,.portfolio-section{padding:4rem 1.5rem;}footer{flex-direction:column;text-align:center;padding:2.5rem 1.5rem;}.form-row{grid-template-columns:1fr;}.lightbox-prev{left:-2rem;}.lightbox-next{right:-2rem;}}
-    @media(max-width:500px){.portfolio-grid{grid-template-columns:1fr;}.reels-grid{grid-template-columns:1fr;}.stats-inner{grid-template-columns:repeat(2,1fr);gap:1rem;}.stat-num{font-size:2.5rem;}}
+    :root {
+      --bg: #0a0a0a; --surface: #141414; --surface2: #1e1e1e;
+      --gold: #ffd700; --gold2: #e6c200; --text: #f0efee;
+      --muted: #a09888; --white: #ffffff;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+
+    /* ──── CUSTOM CURSOR ──── */
+    .cursor { position: fixed; width: 12px; height: 12px; background: var(--gold); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: transform .1s, width .2s, height .2s, opacity .2s; mix-blend-mode: difference; }
+    .cursor-ring { position: fixed; width: 36px; height: 36px; border: 1.5px solid var(--gold); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: transform .12s ease-out, width .2s, height .2s; }
+    body:hover .cursor { opacity: 1; }
+
+    /* ──── NAVBAR ──── */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: .9rem 3rem; display: flex; align-items: center; justify-content: space-between; background: rgba(10,10,10,0); backdrop-filter: blur(0px); transition: all .4s; }
+    nav.scrolled { background: rgba(10,10,10,.92); backdrop-filter: blur(20px); padding: .65rem 3rem; box-shadow: 0 2px 30px rgba(0,0,0,.5); }
+    .nav-logo img { height: 52px; object-fit: contain; filter: drop-shadow(0 0 8px rgba(255,215,0,.35)); }
+    .nav-links { display: flex; align-items: center; gap: 2.5rem; }
+    .nav-links a { font-size: .72rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: rgba(240,239,238,.75); text-decoration: none; transition: color .3s; position: relative; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 100%; height: 1px; background: var(--gold); transition: right .3s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { right: 0; }
+    .nav-book { background: var(--gold); color: #000; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .65rem 1.75rem; border-radius: 2rem; text-decoration: none; transition: all .2s; white-space: nowrap; }
+    .nav-book:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(255,215,0,.3); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 24px; height: 2px; background: var(--text); transition: all .3s; border-radius: 2px; }
+
+    /* Mobile nav */
+    .mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,.97); z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { font-size: 1.5rem; font-weight: 300; letter-spacing: .1em; text-transform: uppercase; color: var(--text); text-decoration: none; transition: color .3s; }
+    .mobile-nav a:hover { color: var(--gold); }
+    .close-nav { position: absolute; top: 1.5rem; right: 2rem; font-size: 2rem; color: var(--text); cursor: pointer; background: none; border: none; }
+
+    /* ──── HERO ──── */
+    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #0a0a0a 0%, #1a1005 40%, #0a0a0a 100%); }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 40%, rgba(255,215,0,.1) 0%, transparent 60%); }
+    .hero-particles { position: absolute; inset: 0; overflow: hidden; }
+    .hero-particles span { position: absolute; width: 2px; height: 2px; background: var(--gold); border-radius: 50%; animation: float-particle linear infinite; opacity: 0; }
+    @keyframes float-particle { 0%{opacity:0;transform:translateY(100vh) scale(0)} 10%{opacity:.6} 90%{opacity:.3} 100%{opacity:0;transform:translateY(-10vh) scale(1)} }
+    .hero-content { position: relative; z-index: 2; text-align: center; padding: 2rem; max-width: 900px; }
+    .hero-eyebrow { font-size: .7rem; letter-spacing: .4em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; animation: fadeUp .8s ease both; }
+    .hero-title { font-family: 'Noto Serif', serif; font-size: clamp(3rem, 8vw, 6.5rem); font-weight: 300; line-height: 1.08; margin-bottom: 1.5rem; animation: fadeUp .8s .15s ease both; }
+    .hero-title em { color: var(--gold); font-style: italic; }
+    .hero-sub { font-size: 1rem; color: var(--muted); line-height: 1.8; max-width: 520px; margin: 0 auto 3rem; animation: fadeUp .8s .3s ease both; }
+    .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeUp .8s .45s ease both; }
+    .btn-primary { background: var(--gold); color: #000; font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .9rem 2.25rem; border-radius: 2rem; text-decoration: none; transition: all .25s; }
+    .btn-primary:hover { background: var(--gold2); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(255,215,0,.35); }
+    .btn-outline { border: 1.5px solid rgba(255,215,0,.5); color: var(--gold); font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; padding: .9rem 2.25rem; border-radius: 2rem; text-decoration: none; transition: all .25s; }
+    .btn-outline:hover { background: rgba(255,215,0,.08); border-color: var(--gold); transform: translateY(-3px); }
+    .scroll-hint { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: .5rem; color: var(--muted); font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; animation: bounce 2s infinite; }
+    .scroll-hint .material-symbols-outlined { font-size: 1.5rem; }
+    @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+
+    /* ──── SECTION HEADERS ──── */
+    .section-label { font-size: .65rem; letter-spacing: .35em; text-transform: uppercase; color: var(--gold); margin-bottom: .75rem; display: flex; align-items: center; gap: .75rem; }
+    .section-label::before { content: ''; display: inline-block; width: 30px; height: 1px; background: var(--gold); }
+    .section-title { font-family: 'Noto Serif', serif; font-size: clamp(1.75rem, 4vw, 3rem); font-weight: 300; margin-bottom: 1rem; }
+    .section-title em { color: var(--gold); font-style: italic; }
+
+    /* ──── PORTFOLIO SECTION ──── */
+    .portfolio-section { padding: 7rem 3rem; }
+    .portfolio-inner { max-width: 1400px; margin: 0 auto; }
+    .portfolio-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
+    .category-tabs { display: flex; gap: .5rem; flex-wrap: wrap; }
+    .tab { background: var(--surface2); border: 1px solid rgba(255,215,0,.1); color: var(--muted); font-family: 'Poppins', sans-serif; font-size: .7rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; padding: .55rem 1.25rem; border-radius: 2rem; cursor: pointer; transition: all .25s; }
+    .tab.active, .tab:hover { background: var(--gold); color: #000; border-color: var(--gold); }
+    .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .portfolio-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .photo-card { position: relative; overflow: hidden; border-radius: .5rem; aspect-ratio: 3/4; background: var(--surface); cursor: pointer; }
+    .photo-card.wide { aspect-ratio: 4/3; }
+    .photo-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; filter: brightness(.9) saturate(1.1); }
+    .photo-card:hover img { transform: scale(1.08); }
+    .photo-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.8) 0%, transparent 50%); opacity: 0; transition: opacity .3s; display: flex; align-items: flex-end; padding: 1.5rem; }
+    .photo-card:hover .photo-overlay { opacity: 1; }
+    .photo-label { font-size: .75rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); }
+    .photo-caption { font-size: .8rem; color: rgba(255,255,255,.8); }
+    /* Placeholder cards for demo */
+    .photo-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, #1e1e1e, #2a2a1a); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .5rem; }
+    .photo-placeholder .material-symbols-outlined { font-size: 3rem; color: rgba(255,215,0,.3); }
+    .photo-placeholder span:last-child { font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; color: rgba(255,215,0,.4); }
+
+    /* ──── LIGHTBOX ──── */
+    .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.95); z-index: 2000; display: none; align-items: center; justify-content: center; }
+    .lightbox.open { display: flex; }
+    .lightbox-content { position: relative; max-width: 90vw; max-height: 90vh; }
+    .lightbox-img { max-width: 90vw; max-height: 85vh; border-radius: .5rem; object-fit: contain; }
+    .lightbox-close { position: absolute; top: -2.5rem; right: 0; background: none; border: none; color: var(--gold); font-size: 2rem; cursor: pointer; line-height: 1; }
+    .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,215,0,.15); border: 1px solid rgba(255,215,0,.3); color: var(--gold); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all .2s; }
+    .lightbox-nav:hover { background: rgba(255,215,0,.3); }
+    .lightbox-prev { left: -3.5rem; }
+    .lightbox-next { right: -3.5rem; }
+
+    /* ──── VIDEOS / REELS ──── */
+    .reels-section { background: var(--surface); padding: 7rem 3rem; }
+    .reels-inner { max-width: 1400px; margin: 0 auto; }
+    .reels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .reel-card { background: var(--surface2); border-radius: .75rem; overflow: hidden; position: relative; aspect-ratio: 9/16; cursor: pointer; transition: transform .3s; }
+    .reel-card:hover { transform: translateY(-6px); }
+    .reel-placeholder { width: 100%; height: 100%; background: linear-gradient(160deg, #1e1e1e, #2a2a1a); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; }
+    .reel-play { width: 56px; height: 56px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: transform .2s, box-shadow .2s; }
+    .reel-card:hover .reel-play { transform: scale(1.1); box-shadow: 0 0 30px rgba(255,215,0,.4); }
+    .reel-play .material-symbols-outlined { font-size: 1.75rem; color: #000; }
+    .reel-title { font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+    .reel-badge { position: absolute; top: 1rem; left: 1rem; background: var(--gold); color: #000; font-size: .6rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .3rem .7rem; border-radius: 2rem; }
+
+    /* ──── STATS ──── */
+    .stats-section { padding: 5rem 3rem; border-top: 1px solid rgba(255,215,0,.08); border-bottom: 1px solid rgba(255,215,0,.08); }
+    .stats-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+    .stat { text-align: center; }
+    .stat-num { font-family: 'Noto Serif', serif; font-size: 3.5rem; font-weight: 300; color: var(--gold); line-height: 1; }
+    .stat-lbl { font-size: .65rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-top: .5rem; }
+
+    /* ──── ABOUT STRIP ──── */
+    .about-strip { padding: 7rem 3rem; max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .about-image { aspect-ratio: 3/4; background: linear-gradient(135deg, #1e1e1e, #2a2a1a); border-radius: .5rem; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1rem; }
+    .about-image .material-symbols-outlined { font-size: 5rem; color: rgba(255,215,0,.25); }
+    .about-text h2 { font-family: 'Noto Serif', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; margin-bottom: 1.5rem; }
+    .about-text h2 em { color: var(--gold); font-style: italic; }
+    .about-text p { font-size: .925rem; color: var(--muted); line-height: 1.9; margin-bottom: 1.25rem; }
+
+    /* ──── CONTACT ──── */
+    .contact-section { background: var(--surface); padding: 7rem 3rem; }
+    .contact-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.5fr; gap: 5rem; align-items: start; }
+    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+    .cinfo-item { display: flex; align-items: flex-start; gap: 1.25rem; }
+    .cinfo-icon { width: 48px; height: 48px; border-radius: 50%; background: rgba(255,215,0,.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .cinfo-icon .material-symbols-outlined { color: var(--gold); font-size: 1.25rem; }
+    .cinfo-label { font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-bottom: .25rem; }
+    .cinfo-value { font-size: 1rem; color: var(--text); }
+    .cinfo-value a { color: var(--text); text-decoration: none; transition: color .3s; }
+    .cinfo-value a:hover { color: var(--gold); }
+    .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .field { display: flex; flex-direction: column; gap: .4rem; }
+    .field label { font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+    .field input, .field textarea, .field select { background: var(--surface2); border: 1px solid rgba(255,215,0,.12); border-radius: .5rem; padding: .85rem 1rem; color: var(--text); font-family: 'Poppins', sans-serif; font-size: .875rem; outline: none; transition: border-color .3s; }
+    .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--gold); }
+    .field input::placeholder, .field textarea::placeholder { color: rgba(160,152,136,.4); }
+    .field textarea { resize: vertical; min-height: 120px; }
+    .field select option { background: var(--surface2); }
+    .submit-btn { background: var(--gold); color: #000; border: none; border-radius: 2rem; padding: 1rem 2.5rem; font-family: 'Poppins', sans-serif; font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; cursor: pointer; align-self: flex-start; transition: all .25s; }
+    .submit-btn:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(255,215,0,.3); }
+
+    /* ──── WHATSAPP FLOAT ──── */
+    .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 900; width: 58px; height: 58px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,.4); text-decoration: none; animation: wa-pulse 2.5s infinite; transition: transform .2s; }
+    .whatsapp-float:hover { transform: scale(1.12); }
+    .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
+    @keyframes wa-pulse { 0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)} 50%{box-shadow:0 4px 35px rgba(37,211,102,.7)} }
+
+    /* ──── FOOTER ──── */
+    footer { background: #050505; padding: 3.5rem 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; border-top: 1px solid rgba(255,215,0,.08); }
+    .footer-logo img { height: 52px; filter: drop-shadow(0 0 6px rgba(255,215,0,.3)); }
+    .footer-info p { font-size: .75rem; color: var(--muted); }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-links a { font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color .3s; }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* ──── ANIMATIONS ──── */
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .2s; }
+    .reveal-delay-3 { transition-delay: .3s; }
+
+    /* ──── RESPONSIVE ──── */
+    @media (max-width: 900px) {
+      nav { padding: .75rem 1.5rem; }
+      .nav-links, .nav-book { display: none; }
+      .hamburger { display: flex; }
+      .portfolio-grid { grid-template-columns: 1fr 1fr; }
+      .reels-grid { grid-template-columns: 1fr 1fr; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .about-strip { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
+      .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .contact-section,.reels-section,.portfolio-section { padding: 4rem 1.5rem; }
+      footer { flex-direction: column; text-align: center; padding: 2.5rem 1.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .lightbox-prev { left: -2rem; }
+      .lightbox-next { right: -2rem; }
+    }
+    @media (max-width: 500px) {
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .reels-grid { grid-template-columns: 1fr; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .stat-num { font-size: 2.5rem; }
+    }
   </style>
 </head>
 <body>
+
+<!-- Custom Cursor -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
+
+<!-- WhatsApp Float Button -->
 <a href="https://wa.me/918847487066?text=Hi%20Surya%2C%20I%20would%20like%20to%20book%20a%20photography%20session." target="_blank" class="whatsapp-float" title="Chat on WhatsApp" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
+<!-- Mobile Nav -->
 <div class="mobile-nav" id="mobileNav">
   <button class="close-nav" id="closeNav">&times;</button>
   <a href="#home" onclick="closeMobileNav()">Home</a>
@@ -153,70 +225,117 @@
   <a href="#contact" onclick="closeMobileNav()">Contact</a>
   <a href="pricing.html" style="color:var(--gold);">Book Now</a>
 </div>
+
+<!-- Navigation -->
 <nav id="navbar">
-  <a href="#home" class="nav-logo"><img src="logo.jpeg" alt="Gurudev Photography"/></a>
+  <a href="#home" class="nav-logo">
+    <img src="https://i.ibb.co/7NQZfG0d/Whats-App-Image-2026-04-01-at-12-25-53-PM-1.jpg" alt="Gurudev Photography"/>
+  </a>
   <div class="nav-links">
-    <a href="#portfolio">Portfolio</a><a href="#reels">Reels</a>
-    <a href="gallery.html">Gallery</a><a href="about.html">About</a>
-    <a href="pricing.html">Pricing</a><a href="#contact">Contact</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#reels">Reels</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="#contact">Contact</a>
   </div>
   <a href="pricing.html#book" class="nav-book">Book Now</a>
   <div class="hamburger" id="hamburger" onclick="openMobileNav()">
     <span></span><span></span><span></span>
   </div>
 </nav>
+
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg"></div>
   <div class="hero-particles" id="particles"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">Gurudev Photography - Bhadrak, Odisha</p>
-    <h1 class="hero-title">Capturing the <em>Soul</em><br/>of the Moment</h1>
-    <p class="hero-sub">Fine art photography that transcends the visual - documenting the profound emotions of life's most significant chapters.</p>
+    <p class="hero-eyebrow">Gurudev Photography — Bhadrak, Odisha</p>
+    <h1 class="hero-title">
+      Capturing the <em>Soul</em><br/>of the Moment
+    </h1>
+    <p class="hero-sub">Fine art photography that transcends the visual — documenting the profound emotions of life's most significant chapters.</p>
     <div class="hero-actions">
       <a href="#portfolio" class="btn-primary">View Portfolio</a>
       <a href="pricing.html#book" class="btn-outline">Book a Session</a>
     </div>
   </div>
-  <div class="scroll-hint"><span class="material-symbols-outlined">keyboard_arrow_down</span>Scroll</div>
+  <div class="scroll-hint">
+    <span class="material-symbols-outlined">keyboard_arrow_down</span>
+    Scroll
+  </div>
 </section>
+
+<!-- STATS -->
 <section class="stats-section" id="stats">
   <div class="stats-inner">
     <div class="stat reveal"><div class="stat-num">500+</div><div class="stat-lbl">Sessions</div></div>
     <div class="stat reveal reveal-delay-1"><div class="stat-num">200+</div><div class="stat-lbl">Weddings</div></div>
     <div class="stat reveal reveal-delay-2"><div class="stat-num">10+</div><div class="stat-lbl">Years</div></div>
-    <div class="stat reveal reveal-delay-3"><div class="stat-num">5&#9733;</div><div class="stat-lbl">Rating</div></div>
+    <div class="stat reveal reveal-delay-3"><div class="stat-num">5★</div><div class="stat-lbl">Rating</div></div>
   </div>
 </section>
+
+<!-- PORTFOLIO -->
 <section class="portfolio-section" id="portfolio">
   <div class="portfolio-inner">
     <div class="portfolio-header reveal">
-      <div><p class="section-label">Gallery</p><h2 class="section-title">Our <em>Work</em></h2></div>
+      <div>
+        <p class="section-label">Gallery</p>
+        <h2 class="section-title">Our <em>Work</em></h2>
+      </div>
       <div class="category-tabs">
-        <button class="tab active" onclick="filterGallery('all',this)">All</button>
-        <button class="tab" onclick="filterGallery('wedding',this)">Wedding</button>
-        <button class="tab" onclick="filterGallery('portrait',this)">Portrait</button>
-        <button class="tab" onclick="filterGallery('events',this)">Events</button>
-        <button class="tab" onclick="filterGallery('album',this)">Album</button>
+        <button class="tab active" onclick="filterGallery('all', this)">All</button>
+        <button class="tab" onclick="filterGallery('wedding', this)">Wedding</button>
+        <button class="tab" onclick="filterGallery('portrait', this)">Portrait</button>
+        <button class="tab" onclick="filterGallery('events', this)">Events</button>
+        <button class="tab" onclick="filterGallery('album', this)">Album</button>
       </div>
     </div>
-    <div class="portfolio-grid" id="photoGrid"></div>
-    <div style="text-align:center;margin-top:3rem;" class="reveal"><a href="gallery.html" class="btn-outline">View Full Gallery</a></div>
+
+    <div class="portfolio-grid" id="photoGrid">
+      <!-- Photos rendered by JS -->
+    </div>
+
+    <div style="text-align:center;margin-top:3rem;" class="reveal">
+      <a href="gallery.html" class="btn-outline">View Full Gallery</a>
+    </div>
   </div>
 </section>
+
+<!-- REELS / VIDEOS -->
 <section class="reels-section" id="reels">
   <div class="reels-inner">
     <div class="reveal">
       <p class="section-label">Behind the Lens</p>
-      <h2 class="section-title"><em>Reels</em> and Videos</h2>
+      <h2 class="section-title"><em>Reels</em> & Videos</h2>
       <p style="color:var(--muted);font-size:.9rem;max-width:500px;line-height:1.8;margin-top:.5rem;">Cinematic moments captured in motion. Short film stories from our sessions.</p>
     </div>
     <div class="reels-grid">
-      <div class="reel-card reveal"><div class="reel-placeholder"><div class="reel-play"><span class="material-symbols-outlined">play_arrow</span></div><p class="reel-title">Wedding Reel</p></div><span class="reel-badge">New</span></div>
-      <div class="reel-card reveal reveal-delay-1"><div class="reel-placeholder"><div class="reel-play"><span class="material-symbols-outlined">play_arrow</span></div><p class="reel-title">Pre-Wedding</p></div></div>
-      <div class="reel-card reveal reveal-delay-2"><div class="reel-placeholder"><div class="reel-play"><span class="material-symbols-outlined">play_arrow</span></div><p class="reel-title">Highlights</p></div></div>
+      <div class="reel-card reveal">
+        <div class="reel-placeholder">
+          <div class="reel-play"><span class="material-symbols-outlined">play_arrow</span></div>
+          <p class="reel-title">Wedding Reel</p>
+        </div>
+        <span class="reel-badge">New</span>
+      </div>
+      <div class="reel-card reveal reveal-delay-1">
+        <div class="reel-placeholder">
+          <div class="reel-play"><span class="material-symbols-outlined">play_arrow</span></div>
+          <p class="reel-title">Pre-Wedding</p>
+        </div>
+      </div>
+      <div class="reel-card reveal reveal-delay-2">
+        <div class="reel-placeholder">
+          <div class="reel-play"><span class="material-symbols-outlined">play_arrow</span></div>
+          <p class="reel-title">Highlights</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- ABOUT STRIP -->
 <section id="about">
   <div class="about-strip">
     <div class="about-image reveal">
@@ -226,7 +345,7 @@
     <div class="about-text reveal reveal-delay-1">
       <p class="section-label">The Photographer</p>
       <h2>Surya Narayan <em>Behera</em></h2>
-      <p>Based in Bhadrak, Odisha, Surya Narayan Behera is more than a photographer - he is a visual storyteller who translates human emotion into timeless digital artifacts.</p>
+      <p>Based in Bhadrak, Odisha, Surya Narayan Behera is more than a photographer — he is a visual storyteller who translates human emotion into timeless digital artifacts.</p>
       <p>With over a decade of dedicated practice, Surya has developed a signature style defined by atmospheric depth, authentic candid moments, and the ability to capture the quiet moments that define a legacy.</p>
       <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap;">
         <a href="about.html" class="btn-primary">Read More</a>
@@ -235,52 +354,101 @@
     </div>
   </div>
 </section>
+
+<!-- CONTACT -->
 <section class="contact-section" id="contact">
   <div class="contact-inner">
     <div class="contact-info">
-      <div class="reveal"><p class="section-label">Get In Touch</p><h2 class="section-title">Book Your <em>Session</em></h2></div>
-      <div class="cinfo-item reveal"><div class="cinfo-icon"><span class="material-symbols-outlined">call</span></div><div><p class="cinfo-label">Phone / WhatsApp</p><p class="cinfo-value"><a href="tel:+918847487066">+91 88474 87066</a></p></div></div>
-      <div class="cinfo-item reveal reveal-delay-1"><div class="cinfo-icon"><span class="material-symbols-outlined">mail</span></div><div><p class="cinfo-label">Email</p><p class="cinfo-value"><a href="mailto:Suryabehera533@gmail.com">Suryabehera533@gmail.com</a></p></div></div>
-      <div class="cinfo-item reveal reveal-delay-2"><div class="cinfo-icon"><span class="material-symbols-outlined">location_on</span></div><div><p class="cinfo-label">Studio Location</p><p class="cinfo-value">Bhadrak, Odisha, India</p></div></div>
+      <div class="reveal">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Book Your <em>Session</em></h2>
+      </div>
+      <div class="cinfo-item reveal">
+        <div class="cinfo-icon"><span class="material-symbols-outlined">call</span></div>
+        <div>
+          <p class="cinfo-label">Phone / WhatsApp</p>
+          <p class="cinfo-value"><a href="tel:+918847487066">+91 88474 87066</a></p>
+        </div>
+      </div>
+      <div class="cinfo-item reveal reveal-delay-1">
+        <div class="cinfo-icon"><span class="material-symbols-outlined">mail</span></div>
+        <div>
+          <p class="cinfo-label">Email</p>
+          <p class="cinfo-value"><a href="mailto:Suryabehera533@gmail.com">Suryabehera533@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="cinfo-item reveal reveal-delay-2">
+        <div class="cinfo-icon"><span class="material-symbols-outlined">location_on</span></div>
+        <div>
+          <p class="cinfo-label">Studio Location</p>
+          <p class="cinfo-value">Bhadrak, Odisha, India</p>
+        </div>
+      </div>
       <a href="https://wa.me/918847487066?text=Hi%20Surya%2C%20I%20want%20to%20book%20a%20session." target="_blank" class="btn-primary reveal reveal-delay-3" style="display:inline-flex;align-items:center;gap:.5rem;width:fit-content;">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Chat on WhatsApp
       </a>
     </div>
+
     <form class="contact-form reveal" onsubmit="submitForm(event)">
       <div class="form-row">
-        <div class="field"><label for="fn">Full Name</label><input id="fn" type="text" placeholder="Your name" required autocomplete="name"/></div>
-        <div class="field"><label for="ph">Phone</label><input id="ph" type="tel" placeholder="+91 XXXXX XXXXX" autocomplete="tel"/></div>
+        <div class="field">
+          <label for="fn">Full Name</label>
+          <input id="fn" type="text" placeholder="Your name" required autocomplete="name"/>
+        </div>
+        <div class="field">
+          <label for="ph">Phone</label>
+          <input id="ph" type="tel" placeholder="+91 XXXXX XXXXX" autocomplete="tel"/>
+        </div>
       </div>
       <div class="form-row">
-        <div class="field"><label for="em">Email</label><input id="em" type="email" placeholder="your@email.com" autocomplete="email"/></div>
-        <div class="field"><label for="dt">Event Date</label><input id="dt" type="date"/></div>
+        <div class="field">
+          <label for="em">Email</label>
+          <input id="em" type="email" placeholder="your@email.com" autocomplete="email"/>
+        </div>
+        <div class="field">
+          <label for="dt">Event Date</label>
+          <input id="dt" type="date"/>
+        </div>
       </div>
       <div class="field">
         <label for="pkg">Package</label>
         <select id="pkg">
           <option value="">Select a package...</option>
-          <option>Essentials - Rs.5,000</option>
-          <option>Signature - Rs.12,000</option>
-          <option>Legacy - Rs.25,000</option>
+          <option>Essentials — ₹5,000</option>
+          <option>Signature — ₹12,000</option>
+          <option>Legacy — ₹25,000</option>
           <option>Custom / Enquire</option>
         </select>
       </div>
-      <div class="field"><label for="msg">Message</label><textarea id="msg" placeholder="Tell us about your event, location, and special requirements..."></textarea></div>
-      <button type="submit" class="submit-btn">Send Enquiry</button>
-      <p id="formSuccess" style="display:none;color:#4caf50;font-size:.85rem;margin-top:.5rem;">Thank you! Surya will contact you within 24 hours.</p>
+      <div class="field">
+        <label for="msg">Message</label>
+        <textarea id="msg" placeholder="Tell us about your event, location, and special requirements..."></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Enquiry →</button>
+      <p id="formSuccess" style="display:none;color:#4caf50;font-size:.85rem;margin-top:.5rem;">✓ Thank you! Surya will contact you within 24 hours.</p>
     </form>
   </div>
 </section>
+
+<!-- FOOTER -->
 <footer>
-  <a href="#home"><img src="logo.jpeg" alt="Gurudev Photography" style="height:52px;filter:drop-shadow(0 0 6px rgba(255,215,0,.3));"/></a>
-  <div class="footer-info"><p>2024 Gurudev Photography by Surya Narayan Behera</p><p>Bhadrak, Odisha, India</p></div>
+  <a href="#home"><img src="https://i.ibb.co/7NQZfG0d/Whats-App-Image-2026-04-01-at-12-25-53-PM-1.jpg" alt="Gurudev Photography" style="height:52px;filter:drop-shadow(0 0 6px rgba(255,215,0,.3));"/></a>
+  <div class="footer-info">
+    <p>© 2024 Gurudev Photography by Surya Narayan Behera</p>
+    <p>Bhadrak, Odisha, India</p>
+  </div>
   <div class="footer-links">
-    <a href="#portfolio">Portfolio</a><a href="#reels">Reels</a>
-    <a href="gallery.html">Gallery</a><a href="pricing.html">Pricing</a>
-    <a href="about.html">About</a><a href="index.html">Dashboard</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#reels">Reels</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="index.html">Dashboard</a>
   </div>
 </footer>
+
+<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
   <div class="lightbox-content">
     <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
@@ -289,22 +457,38 @@
     <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1)"><span class="material-symbols-outlined">chevron_right</span></button>
   </div>
 </div>
+
 <script>
-const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+// ── CUSTOM CURSOR ──
+const cur = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
 let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-(function anim(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(anim);})();
-const navbar=document.getElementById('navbar');
-window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60));
-function openMobileNav(){document.getElementById('mobileNav').classList.add('open');}
-function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');}
-document.getElementById('closeNav').onclick=closeMobileNav;
-const pContainer=document.getElementById('particles');
-for(let i=0;i<35;i++){const s=document.createElement('span');s.style.cssText='left:'+Math.random()*100+'%;animation-duration:'+(8+Math.random()*15)+'s;animation-delay:'+Math.random()*-20+'s;';pContainer.appendChild(s);}
-const photos=[
+document.addEventListener('mousemove', e=>{ mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
+(function animRing(){ rx+=(mx-rx)*.12; ry+=(my-ry)*.12; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(animRing); })();
+
+// ── NAVBAR SCROLL ──
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', ()=>{ navbar.classList.toggle('scrolled', window.scrollY>60); });
+
+// ── MOBILE NAV ──
+function openMobileNav(){ document.getElementById('mobileNav').classList.add('open'); }
+function closeMobileNav(){ document.getElementById('mobileNav').classList.remove('open'); }
+document.getElementById('closeNav').onclick = closeMobileNav;
+
+// ── HERO PARTICLES ──
+const pContainer = document.getElementById('particles');
+for(let i=0;i<35;i++){
+  const s = document.createElement('span');
+  s.style.cssText = `left:${Math.random()*100}%;animation-duration:${8+Math.random()*15}s;animation-delay:${Math.random()*-20}s;width:${1+Math.random()*2}px;height:${1+Math.random()*2}px;opacity:${0.2+Math.random()*.5}`;
+  pContainer.appendChild(s);
+}
+
+// ── GALLERY DATA ──
+const photos = [
+  {cat:'wedding',label:'Wedding',caption:'Bridal Portrait',src:'images/portfolio/bridal-portrait-temp.png',temp:true},
   {cat:'wedding',label:'Wedding',caption:'Grand Celebration'},
   {cat:'portrait',label:'Portrait',caption:'Personal Branding'},
-  {cat:'wedding',label:'Wedding',caption:'Bride and Groom'},
+  {cat:'wedding',label:'Wedding',caption:'Bride & Groom'},
   {cat:'events',label:'Event',caption:'Cultural Ceremony'},
   {cat:'album',label:'Album',caption:'Family Memories'},
   {cat:'portrait',label:'Portrait',caption:'Solo Session'},
@@ -312,40 +496,67 @@ const photos=[
   {cat:'events',label:'Event',caption:'Corporate Event'},
   {cat:'album',label:'Album',caption:'Wedding Album'},
 ];
-let currentPhotoIndex=0;
-const grid=document.getElementById('photoGrid');
-function renderGallery(filter){
-  const filtered=(!filter||filter==='all')?photos:photos.filter(function(p){return p.cat===filter;});
-  var html='';
-  for(var i=0;i<filtered.length;i++){
-    var p=filtered[i];
-    var idx=photos.indexOf(p);
-    var wide=(i===0||i===4)?'wide':'';
-    html+='<div class="photo-card '+wide+'" onclick="openLightbox('+idx+')" data-cat="'+p.cat+'">'
-      +'<div class="photo-placeholder"><span class="material-symbols-outlined">photo_camera</span><span>'+p.label+'</span></div>'
-      +'<div class="photo-overlay"><div><p class="photo-label">'+p.label+'</p><p class="photo-caption">'+p.caption+'</p></div></div>'
-      +'</div>';
-  }
-  grid.innerHTML=html;
+
+let currentPhotoIndex = 0;
+const grid = document.getElementById('photoGrid');
+
+function renderGallery(filter='all'){
+  const filtered = filter==='all' ? photos : photos.filter(p=>p.cat===filter);
+  grid.innerHTML = filtered.map((p,i)=>{
+    const idx = photos.indexOf(p);
+    const wide = !p.src && (i===0 || i===4);
+    const inner = p.src
+      ? `<img src="${p.src}" alt="${p.caption} — Gurudev Photography, Bhadrak" loading="lazy"/>`
+      : `<div class="photo-placeholder">
+        <span class="material-symbols-outlined">photo_camera</span>
+        <span>${p.label}</span>
+      </div>`;
+    const cap = p.temp ? `${p.caption} <span style="opacity:.75;font-size:.65rem;">(temp)</span>` : p.caption;
+    return `
+    <div class="photo-card ${wide?'wide':''}" onclick="openLightbox(${idx})" data-cat="${p.cat}">
+      ${inner}
+      <div class="photo-overlay">
+        <div>
+          <p class="photo-label">${p.label}</p>
+          <p class="photo-caption">${cap}</p>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
 }
-renderGallery('all');
-function filterGallery(cat,btn){
-  var tabs=document.querySelectorAll('.tab');
-  for(var i=0;i<tabs.length;i++)tabs[i].classList.remove('active');
+renderGallery();
+
+function filterGallery(cat, btn){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   btn.classList.add('active');
   renderGallery(cat);
 }
+
+// ── LIGHTBOX ──
 function openLightbox(i){
-  currentPhotoIndex=i;
-  document.getElementById('lightboxImg').src='https://placehold.co/900x600/1e1e1e/ffd700?text='+encodeURIComponent(photos[i].caption);
+  currentPhotoIndex = i;
+  const ph = photos[i];
+  document.getElementById('lightboxImg').src = ph.src
+    ? ph.src
+    : 'https://via.placeholder.com/900x600/1e1e1e/ffd700?text='+encodeURIComponent(ph.caption);
+  document.getElementById('lightboxImg').alt = ph.caption + (ph.temp ? ' (temp)' : '') + ' — Gurudev Photography';
   document.getElementById('lightbox').classList.add('open');
 }
-function closeLightbox(e){if(!e||e.target===document.getElementById('lightbox'))document.getElementById('lightbox').classList.remove('open');}
-function lightboxNav(dir){currentPhotoIndex=(currentPhotoIndex+dir+photos.length)%photos.length;openLightbox(currentPhotoIndex);}
-document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('lightbox').classList.remove('open');if(e.key==='ArrowLeft')lightboxNav(-1);if(e.key==='ArrowRight')lightboxNav(1);});
-var observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.12});
-document.querySelectorAll('.reveal').forEach(function(el){observer.observe(el);});
-function submitForm(e){e.preventDefault();document.getElementById('formSuccess').style.display='block';e.target.reset();setTimeout(function(){document.getElementById('formSuccess').style.display='none';},5000);}
+function closeLightbox(e){ if(!e||e.target===document.getElementById('lightbox'))document.getElementById('lightbox').classList.remove('open'); }
+function lightboxNav(dir){ currentPhotoIndex=(currentPhotoIndex+dir+photos.length)%photos.length; openLightbox(currentPhotoIndex); }
+document.addEventListener('keydown',e=>{ if(e.key==='Escape')document.getElementById('lightbox').classList.remove('open'); if(e.key==='ArrowLeft')lightboxNav(-1); if(e.key==='ArrowRight')lightboxNav(1); });
+
+// ── SCROLL REVEAL ──
+const observer = new IntersectionObserver(entries=>entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// ── CONTACT FORM ──
+function submitForm(e){
+  e.preventDefault();
+  document.getElementById('formSuccess').style.display='block';
+  e.target.reset();
+  setTimeout(()=>document.getElementById('formSuccess').style.display='none',5000);
+}
 </script>
 </body>
 </html>
