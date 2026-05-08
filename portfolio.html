@@ -1,739 +1,1305 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Gurudev Photography by Surya Narayan Behera – Premium wedding, portrait and event photography in Bhadrak, Odisha. Book your session today."/>
-  <meta name="keywords" content="Gurudev Photography, wedding photographer Bhadrak, Odisha photographer, Surya Narayan Behera, portrait photography"/>
-  <meta name="author" content="Surya Narayan Behera"/>
-  <meta property="og:title" content="Gurudev Photography | Bhadrak, Odisha"/>
-  <meta property="og:description" content="Premium photography by Surya Narayan Behera. Weddings, portraits, events."/>
-  <title>Gurudev Photography | Surya Narayan Behera | Bhadrak, Odisha</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap" rel="stylesheet"/>
-  <style>
-    :root {
-      --bg: #0a0a0a; --surface: #141414; --surface2: #1e1e1e;
-      --gold: #ffd700; --gold2: #e6c200; --text: #f0efee;
-      --muted: #a09888; --white: #ffffff;
-      --saffron: #FF8C00; --maroon: #8B0000; --deep-red: #CC0000;
-      --marigold: #FF6B00;
-    }
-    /* ── Global Indian Wedding Body Overlay ── */
-    body::before {
-      content: '';
-      position: fixed; inset: 0; pointer-events: none; z-index: 0;
-      background: radial-gradient(ellipse at 50% 50%, rgba(255,204,0,.08), transparent 70%);
-    }
-    body::after {
-      content: '';
-      position: fixed; inset: 0; pointer-events: none; z-index: 0;
-      background-image: url('https://www.transparenttextures.com/patterns/paisley.png');
-      opacity: 0.045;
-    }
-    /* Playfair Display on hero title */
-    .hero-title { font-family: 'Playfair Display', 'Noto Serif', serif !important; }
-    /* ── AUTO SLIDESHOW ── */
-    .hero-slideshow { position: absolute; inset: 0; z-index: 0; }
-    .hero-slide {
-      position: absolute; inset: 0;
-      background-size: cover; background-position: center;
-      opacity: 0; transition: opacity 1.5s ease;
-    }
-    .hero-slide.active { opacity: 1; }
-    .hero-slide::after {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(5,2,0,.70) 0%, rgba(20,8,0,.60) 50%, rgba(10,4,0,.82) 100%);
-    }
-    /* Diya warm glow pulse */
-    @keyframes diya-pulse {
-      0%,100% { opacity: .28; }
-      50%      { opacity: .45; }
-    }
-    .hero-diya-glow {
-      position: absolute; inset: 0; z-index: 1; pointer-events: none;
-      background: radial-gradient(ellipse at 50% 100%, rgba(255,140,0,.38) 0%, rgba(255,107,0,.12) 45%, transparent 68%);
-      animation: diya-pulse 4s ease-in-out infinite;
-    }
-    /* Indian Wedding Floral Accents */
-    .floral-left, .floral-right { position: absolute; top: 0; bottom: 0; width: 120px; pointer-events: none; z-index: 1; opacity: 0.18; background-repeat: repeat-y; background-size: contain; }
-    .floral-left { left: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='200' viewBox='0 0 80 200'%3E%3Ccircle cx='40' cy='40' r='18' fill='%23FF8C00'/%3E%3Ccircle cx='20' cy='80' r='12' fill='%23FFD700'/%3E%3Ccircle cx='60' cy='120' r='15' fill='%23FF6B00'/%3E%3Ccircle cx='30' cy='160' r='10' fill='%23FF8C00'/%3E%3C/svg%3E"); }
-    .floral-right { right: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='200' viewBox='0 0 80 200'%3E%3Ccircle cx='40' cy='40' r='18' fill='%23FF8C00'/%3E%3Ccircle cx='60' cy='80' r='12' fill='%23FFD700'/%3E%3Ccircle cx='20' cy='120' r='15' fill='%23FF6B00'/%3E%3Ccircle cx='50' cy='160' r='10' fill='%23FF8C00'/%3E%3C/svg%3E"); }
-    /* Indian accent strip */
-    .india-strip { width: 100%; height: 4px; background: linear-gradient(90deg, var(--maroon), var(--saffron), var(--gold), var(--saffron), var(--maroon)); }
-    /* Category pill overrides for Indian theme */
-    .tab.indian { background: rgba(139,0,0,.15); border-color: rgba(139,0,0,.3); color: var(--saffron); }
-    .tab.indian.active, .tab.indian:hover { background: var(--saffron); color: #000; border-color: var(--saffron); }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--text); font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+  <!-- ═══════════════════════════════════════════════
+       GURUDEV PHOTOGRAPHY — SEO-OPTIMIZED WEBSITE
+       Business: Wedding Photography | Bhadrak, Odisha
+       Author: Surya Narayan Behera
+  ═══════════════════════════════════════════════ -->
 
-    /* ──── CUSTOM CURSOR ──── */
-    .cursor { position: fixed; width: 12px; height: 12px; background: var(--gold); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: transform .1s, width .2s, height .2s, opacity .2s; mix-blend-mode: difference; }
-    .cursor-ring { position: fixed; width: 36px; height: 36px; border: 1.5px solid var(--gold); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: transform .12s ease-out, width .2s, height .2s; }
-    body:hover .cursor { opacity: 1; }
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    /* ──── NAVBAR ──── */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: .9rem 3rem; display: flex; align-items: center; justify-content: space-between; background: rgba(10,10,10,0); backdrop-filter: blur(0px); transition: all .4s; }
-    nav.scrolled { background: rgba(10,10,10,.92); backdrop-filter: blur(20px); padding: .65rem 3rem; box-shadow: 0 2px 30px rgba(0,0,0,.5); }
-    .nav-logo img { height: 52px; object-fit: contain; filter: drop-shadow(0 0 8px rgba(255,215,0,.35)); }
-    .nav-links { display: flex; align-items: center; gap: 2.5rem; }
-    .nav-links a { font-size: .72rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: rgba(240,239,238,.75); text-decoration: none; transition: color .3s; position: relative; }
-    .nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 100%; height: 1px; background: var(--gold); transition: right .3s; }
-    .nav-links a:hover { color: var(--gold); }
-    .nav-links a:hover::after { right: 0; }
-    .nav-book { background: var(--gold); color: #000; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .65rem 1.75rem; border-radius: 2rem; text-decoration: none; transition: all .2s; white-space: nowrap; }
-    .nav-book:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(255,215,0,.3); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-    .hamburger span { width: 24px; height: 2px; background: var(--text); transition: all .3s; border-radius: 2px; }
+  <!-- ── CORE SEO TAGS ── -->
+  <title>Best Wedding Photographer in Bhadrak, Odisha | Gurudev Photography</title>
+  <meta name="description" content="Gurudev Photography by Surya Narayan Behera — Award-winning wedding photographer in Bhadrak, Odisha. 200+ weddings, 10+ years experience. Cinematic wedding films, pre-wedding shoots, baby photography. Book now!" />
+  <meta name="keywords" content="wedding photographer bhadrak, odisha wedding photography, best wedding photographer bhadrak, pre wedding photography odisha, cinematic wedding films bhadrak, wedding photographer near me, Surya Narayan Behera photographer, Gurudev Photography" />
+  <meta name="author" content="Surya Narayan Behera — Gurudev Photography" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="theme-color" content="#1a0a3b" />
+  <meta name="copyright" content="© 2026 Gurudev Photography" />
+  <meta name="language" content="English" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="geo.region" content="IN-OR" />
+  <meta name="geo.placename" content="Bhadrak, Odisha, India" />
+  <meta name="geo.position" content="21.0580;86.4950" />
+  <meta name="ICBM" content="21.0580, 86.4950" />
 
-    /* Mobile nav */
-    .mobile-nav { display: none; position: fixed; inset: 0; background: rgba(10,10,10,.97); z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; }
-    .mobile-nav.open { display: flex; }
-    .mobile-nav a { font-size: 1.5rem; font-weight: 300; letter-spacing: .1em; text-transform: uppercase; color: var(--text); text-decoration: none; transition: color .3s; }
-    .mobile-nav a:hover { color: var(--gold); }
-    .close-nav { position: absolute; top: 1.5rem; right: 2rem; font-size: 2rem; color: var(--text); cursor: pointer; background: none; border: none; }
+  <!-- ── CANONICAL URL ── -->
+  <link rel="canonical" href="https://www.gurudevphotography.in/" />
 
-    /* ──── HERO ──── */
-    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    /* Indian Wedding Background Image */
-    .hero-bg {
-      position: absolute; inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1583089892943-e02e5b017b6a?w=1920&q=90');
-      background-size: cover;
-      background-position: center 30%;
-      background-repeat: no-repeat;
+  <!-- ── OPEN GRAPH (Facebook/LinkedIn) ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.gurudevphotography.in/" />
+  <meta property="og:title" content="Best Wedding Photographer in Bhadrak, Odisha | Gurudev Photography" />
+  <meta property="og:description" content="Capture your special moments with Gurudev Photography. 200+ weddings, cinematic films, pre-wedding shoots in Bhadrak, Odisha. Book Surya Narayan Behera today!" />
+  <meta property="og:image" content="https://www.gurudevphotography.in/hero-bg.png" />
+  <meta property="og:image:width" content="1226" />
+  <meta property="og:image:height" content="921" />
+  <meta property="og:image:alt" content="Gurudev Photography — Wedding Photographer in Bhadrak Odisha" />
+  <meta property="og:site_name" content="Gurudev Photography" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- ── TWITTER CARD ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@gurudevphoto" />
+  <meta name="twitter:creator" content="@gurudevphoto" />
+  <meta name="twitter:title" content="Best Wedding Photographer in Bhadrak, Odisha | Gurudev Photography" />
+  <meta name="twitter:description" content="Cinematic weddings, pre-wedding shoots, baby photography in Bhadrak, Odisha. 10+ years | 200+ weddings | 5★ rated." />
+  <meta name="twitter:image" content="https://www.gurudevphotography.in/hero-bg.png" />
+
+  <!-- ── PRELOAD CRITICAL ASSETS ── -->
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="preload" href="script.js" as="script" />
+  <!-- Preload hero image — improves LCP score significantly -->
+  <link rel="preload" href="hero-bg.png" as="image" fetchpriority="high" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.google.com" />
+
+  <!-- ── FONTS ── -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Pacifico&display=swap" rel="stylesheet" />
+
+  <!-- ── STYLESHEET ── -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ── FAVICONS ── -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/site.webmanifest" />
+
+  <!-- ── ALTERNATE / HREFLANG ── -->
+  <link rel="alternate" hreflang="en-in" href="https://www.gurudevphotography.in/" />
+
+  <!-- ══════════════════════════════════════════════
+       STRUCTURED DATA — JSON-LD (Schema.org)
+  ══════════════════════════════════════════════ -->
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.gurudevphotography.in/#business",
+    "name": "Gurudev Photography",
+    "alternateName": "Gurudev Photo Studio",
+    "description": "Award-winning wedding photography studio in Bhadrak, Odisha. Specializing in cinematic wedding films, pre-wedding shoots, baby photography, and event coverage.",
+    "url": "https://www.gurudevphotography.in/",
+    "telephone": "+918847487066",
+    "email": "Suryabehera533@gmail.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Surya Narayan Behera",
+      "jobTitle": "Lead Photographer",
+      "url": "https://www.gurudevphotography.in/about"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bhadrak",
+      "addressLocality": "Bhadrak",
+      "addressRegion": "Odisha",
+      "postalCode": "756100",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 21.0580,
+      "longitude": 86.4950
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "09:00",
+        "closes": "20:00"
+      }
+    ],
+    "priceRange": "₹₹",
+    "currenciesAccepted": "INR",
+    "paymentAccepted": "Cash, UPI, Bank Transfer",
+    "image": ["https://www.gurudevphotography.in/assets/og-image.jpg"],
+    "logo": "https://www.gurudevphotography.in/assets/logo.png",
+    "sameAs": [
+      "https://www.instagram.com/gurudevphotography",
+      "https://www.facebook.com/gurudevphotography",
+      "https://www.youtube.com/@gurudevphotography"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "87",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Photography Packages",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Essentials Package",
+          "price": "5000",
+          "priceCurrency": "INR",
+          "description": "Full-day wedding photography, 200+ edited photos"
+        },
+        {
+          "@type": "Offer",
+          "name": "Signature Package",
+          "price": "12000",
+          "priceCurrency": "INR",
+          "description": "Two-day coverage, cinematic highlight reel, premium album"
+        },
+        {
+          "@type": "Offer",
+          "name": "Legacy Package",
+          "price": "25000",
+          "priceCurrency": "INR",
+          "description": "Full event suite, cinematic film, drone shots, luxury album"
+        }
+      ]
     }
-    /* Dark cinematic overlay — keeps text readable */
-    .hero-bg::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg,
-        rgba(5,2,0,.75) 0%,
-        rgba(20,8,0,.65) 40%,
-        rgba(10,4,0,.80) 100%);
-      z-index: 1;
+  }
+  </script>
+
+  <!-- Photographer / Person Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Surya Narayan Behera",
+    "jobTitle": "Professional Wedding Photographer",
+    "worksFor": {
+      "@type": "LocalBusiness",
+      "name": "Gurudev Photography"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bhadrak",
+      "addressRegion": "Odisha",
+      "addressCountry": "IN"
+    },
+    "telephone": "+918847487066",
+    "email": "Suryabehera533@gmail.com",
+    "url": "https://www.gurudevphotography.in/about",
+    "knowsAbout": ["Wedding Photography","Pre-Wedding Photography","Cinematic Films","Baby Photography","Event Photography"],
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Photographer",
+      "occupationalCategory": "27-1013"
     }
-    /* Saffron glow at bottom for warmth */
-    .hero-bg::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 50% 100%, rgba(255,140,0,.30) 0%, rgba(255,107,0,.10) 40%, transparent 65%);
-      z-index: 2;
+  }
+  </script>
+
+  <!-- WebSite + Sitelinks Search Box Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://www.gurudevphotography.in/",
+    "name": "Gurudev Photography",
+    "description": "Wedding Photography in Bhadrak, Odisha",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.gurudevphotography.in/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
     }
-    /* Paisley corner decorations */
-    .paisley-tl, .paisley-tr, .paisley-bl, .paisley-br {
-      position: absolute; width: 180px; height: 180px; z-index: 3; opacity: 0.22; pointer-events: none;
-    }
-    .paisley-tl { top: 0; left: 0; }
-    .paisley-tr { top: 0; right: 0; transform: scaleX(-1); }
-    .paisley-bl { bottom: 0; left: 0; transform: scaleY(-1); }
-    .paisley-br { bottom: 0; right: 0; transform: scale(-1); }
-    /* Mandala watermark */
-    .mandala-bg {
-      position: absolute; top: 50%; left: 50%;
-      transform: translate(-50%,-50%);
-      width: 520px; height: 520px;
-      z-index: 3; opacity: 0.06;
-      pointer-events: none;
-      animation: mandala-spin 60s linear infinite;
-    }
-    @keyframes mandala-spin { to { transform: translate(-50%,-50%) rotate(360deg); } }
-    /* Gold border lines top + bottom of hero */
-    .hero-gold-top, .hero-gold-bottom {
-      position: absolute; left: 0; right: 0; height: 2px; z-index: 10;
-      background: linear-gradient(90deg, transparent, rgba(255,215,0,.6), var(--gold), rgba(255,215,0,.6), transparent);
-    }
-    .hero-gold-top { top: 0; }
-    .hero-gold-bottom { bottom: 0; }
-    .hero-particles { position: absolute; inset: 0; overflow: hidden; }
-    .hero-particles span { position: absolute; width: 2px; height: 2px; background: var(--gold); border-radius: 50%; animation: float-particle linear infinite; opacity: 0; }
-    @keyframes float-particle { 0%{opacity:0;transform:translateY(100vh) scale(0)} 10%{opacity:.6} 90%{opacity:.3} 100%{opacity:0;transform:translateY(-10vh) scale(1)} }
-    .hero-content { position: relative; z-index: 2; text-align: center; padding: 2rem; max-width: 900px; }
-    .hero-eyebrow { font-size: .7rem; letter-spacing: .4em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; animation: fadeUp .8s ease both; }
-    .hero-title { font-family: 'Noto Serif', serif; font-size: clamp(3rem, 8vw, 6.5rem); font-weight: 300; line-height: 1.08; margin-bottom: 1.5rem; animation: fadeUp .8s .15s ease both; }
-    .hero-title em { color: var(--gold); font-style: italic; }
-    .hero-sub { font-size: 1rem; color: var(--muted); line-height: 1.8; max-width: 520px; margin: 0 auto 3rem; animation: fadeUp .8s .3s ease both; }
-    .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeUp .8s .45s ease both; }
-    .btn-primary { background: var(--gold); color: #000; font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .9rem 2.25rem; border-radius: 2rem; text-decoration: none; transition: all .25s; }
-    .btn-primary:hover { background: var(--gold2); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(255,215,0,.35); }
-    .btn-outline { border: 1.5px solid rgba(255,215,0,.5); color: var(--gold); font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; padding: .9rem 2.25rem; border-radius: 2rem; text-decoration: none; transition: all .25s; }
-    .btn-outline:hover { background: rgba(255,215,0,.08); border-color: var(--gold); transform: translateY(-3px); }
-    .scroll-hint { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: .5rem; color: var(--muted); font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; animation: bounce 2s infinite; }
-    .scroll-hint .material-symbols-outlined { font-size: 1.5rem; }
-    @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
-    @keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+  }
+  </script>
 
-    /* ──── SECTION HEADERS ──── */
-    .section-label { font-size: .65rem; letter-spacing: .35em; text-transform: uppercase; color: var(--gold); margin-bottom: .75rem; display: flex; align-items: center; gap: .75rem; }
-    .section-label::before { content: ''; display: inline-block; width: 30px; height: 1px; background: var(--gold); }
-    .section-title { font-family: 'Noto Serif', serif; font-size: clamp(1.75rem, 4vw, 3rem); font-weight: 300; margin-bottom: 1rem; }
-    .section-title em { color: var(--gold); font-style: italic; }
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.gurudevphotography.in/"},
+      {"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.gurudevphotography.in/portfolio"},
+      {"@type":"ListItem","position":3,"name":"Services","item":"https://www.gurudevphotography.in/services"},
+      {"@type":"ListItem","position":4,"name":"Blog","item":"https://www.gurudevphotography.in/blog"},
+      {"@type":"ListItem","position":5,"name":"Contact","item":"https://www.gurudevphotography.in/contact"}
+    ]
+  }
+  </script>
 
-    /* ──── PORTFOLIO SECTION ──── */
-    .portfolio-section { padding: 7rem 3rem; }
-    .portfolio-inner { max-width: 1400px; margin: 0 auto; }
-    .portfolio-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
-    .category-tabs { display: flex; gap: .5rem; flex-wrap: wrap; }
-    .tab { background: var(--surface2); border: 1px solid rgba(255,215,0,.1); color: var(--muted); font-family: 'Poppins', sans-serif; font-size: .7rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; padding: .55rem 1.25rem; border-radius: 2rem; cursor: pointer; transition: all .25s; }
-    .tab.active, .tab:hover { background: var(--gold); color: #000; border-color: var(--gold); }
-    .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-    .portfolio-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
-    .photo-card { position: relative; overflow: hidden; border-radius: .5rem; aspect-ratio: 3/4; background: var(--surface); cursor: pointer; }
-    .photo-card.wide { aspect-ratio: 4/3; }
-    .photo-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; filter: brightness(.9) saturate(1.1); }
-    .photo-card:hover img { transform: scale(1.08); }
-    .photo-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.8) 0%, transparent 50%); opacity: 0; transition: opacity .3s; display: flex; align-items: flex-end; padding: 1.5rem; }
-    .photo-card:hover .photo-overlay { opacity: 1; }
-    .photo-label { font-size: .75rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); }
-    .photo-caption { font-size: .8rem; color: rgba(255,255,255,.8); }
-    /* Placeholder cards for demo */
-    .photo-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, #1e1e1e, #2a2a1a); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .5rem; }
-    .photo-placeholder .material-symbols-outlined { font-size: 3rem; color: rgba(255,215,0,.3); }
-    .photo-placeholder span:last-child { font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; color: rgba(255,215,0,.4); }
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does a wedding photographer cost in Bhadrak, Odisha?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our wedding photography packages start from ₹5,000 for the Essentials package, ₹12,000 for Signature, and ₹25,000 for the all-inclusive Legacy package. Custom pricing is also available for multi-day events."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far in advance should I book a wedding photographer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We recommend booking at least 3–6 months in advance, especially for peak wedding season (October–February). Popular dates fill up quickly, so early booking secures your date."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you travel outside Bhadrak for weddings?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Surya covers weddings across all of Odisha including Bhubaneswar, Cuttack, Puri, Balasore, Kendrapara, and Jajpur. Outstation travel charges apply for destinations beyond 50km."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to receive wedding photos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Edited gallery delivery typically takes 3–4 weeks for standard packages and 1–2 weeks for priority packages. Cinematic films take 4–6 weeks for full post-production."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is included in the Signature wedding photography package?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Signature package (₹12,000) includes two-day wedding coverage, 500+ edited digital photos, a cinematic highlight reel, premium 30-page photo album, and priority delivery."
+        }
+      }
+    ]
+  }
+  </script>
 
-    /* ──── LIGHTBOX ──── */
-    .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.95); z-index: 2000; display: none; align-items: center; justify-content: center; }
-    .lightbox.open { display: flex; }
-    .lightbox-content { position: relative; max-width: 90vw; max-height: 90vh; }
-    .lightbox-img { max-width: 90vw; max-height: 85vh; border-radius: .5rem; object-fit: contain; }
-    .lightbox-close { position: absolute; top: -2.5rem; right: 0; background: none; border: none; color: var(--gold); font-size: 2rem; cursor: pointer; line-height: 1; }
-    .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,215,0,.15); border: 1px solid rgba(255,215,0,.3); color: var(--gold); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all .2s; }
-    .lightbox-nav:hover { background: rgba(255,215,0,.3); }
-    .lightbox-prev { left: -3.5rem; }
-    .lightbox-next { right: -3.5rem; }
+  <!-- Review Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "LocalBusiness",
+      "name": "Gurudev Photography"
+    },
+    "reviewRating": {"@type": "Rating","ratingValue": "5","bestRating": "5"},
+    "name": "Absolutely breathtaking wedding photos",
+    "author": {"@type": "Person","name": "Priya Mohapatra"},
+    "reviewBody": "Surya captured our wedding day so beautifully. Every emotion, every ritual — perfectly preserved. The cinematic film made us cry happy tears. Highly recommend Gurudev Photography to every couple in Odisha!"
+  }
+  </script>
 
-    /* ──── VIDEOS / REELS ──── */
-    .reels-section { background: var(--surface); padding: 7rem 3rem; }
-    .reels-inner { max-width: 1400px; margin: 0 auto; }
-    .reels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
-    .reel-card { background: var(--surface2); border-radius: .75rem; overflow: hidden; position: relative; aspect-ratio: 9/16; cursor: pointer; transition: transform .3s; }
-    .reel-card:hover { transform: translateY(-6px); }
-    .reel-placeholder { width: 100%; height: 100%; background: linear-gradient(160deg, #1e1e1e, #2a2a1a); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; }
-    .reel-play { width: 56px; height: 56px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: transform .2s, box-shadow .2s; }
-    .reel-card:hover .reel-play { transform: scale(1.1); box-shadow: 0 0 30px rgba(255,215,0,.4); }
-    .reel-play .material-symbols-outlined { font-size: 1.75rem; color: #000; }
-    .reel-title { font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
-    .reel-badge { position: absolute; top: 1rem; left: 1rem; background: var(--gold); color: #000; font-size: .6rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .3rem .7rem; border-radius: 2rem; }
-
-    /* ──── STATS ──── */
-    .stats-section { padding: 5rem 3rem; border-top: 1px solid rgba(255,215,0,.08); border-bottom: 1px solid rgba(255,215,0,.08); }
-    .stats-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
-    .stat { text-align: center; }
-    .stat-num { font-family: 'Noto Serif', serif; font-size: 3.5rem; font-weight: 300; color: var(--gold); line-height: 1; }
-    .stat-lbl { font-size: .65rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-top: .5rem; }
-
-    /* ──── ABOUT STRIP ──── */
-    .about-strip { padding: 7rem 3rem; max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-    .about-image { aspect-ratio: 3/4; background: linear-gradient(135deg, #1e1e1e, #2a2a1a); border-radius: .5rem; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1rem; }
-    .about-image .material-symbols-outlined { font-size: 5rem; color: rgba(255,215,0,.25); }
-    .about-text h2 { font-family: 'Noto Serif', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; margin-bottom: 1.5rem; }
-    .about-text h2 em { color: var(--gold); font-style: italic; }
-    .about-text p { font-size: .925rem; color: var(--muted); line-height: 1.9; margin-bottom: 1.25rem; }
-
-    /* ──── CONTACT ──── */
-    .contact-section { background: var(--surface); padding: 7rem 3rem; }
-    .contact-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.5fr; gap: 5rem; align-items: start; }
-    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
-    .cinfo-item { display: flex; align-items: flex-start; gap: 1.25rem; }
-    .cinfo-icon { width: 48px; height: 48px; border-radius: 50%; background: rgba(255,215,0,.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .cinfo-icon .material-symbols-outlined { color: var(--gold); font-size: 1.25rem; }
-    .cinfo-label { font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-bottom: .25rem; }
-    .cinfo-value { font-size: 1rem; color: var(--text); }
-    .cinfo-value a { color: var(--text); text-decoration: none; transition: color .3s; }
-    .cinfo-value a:hover { color: var(--gold); }
-    .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-    .field { display: flex; flex-direction: column; gap: .4rem; }
-    .field label { font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
-    .field input, .field textarea, .field select { background: var(--surface2); border: 1px solid rgba(255,215,0,.12); border-radius: .5rem; padding: .85rem 1rem; color: var(--text); font-family: 'Poppins', sans-serif; font-size: .875rem; outline: none; transition: border-color .3s; }
-    .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--gold); }
-    .field input::placeholder, .field textarea::placeholder { color: rgba(160,152,136,.4); }
-    .field textarea { resize: vertical; min-height: 120px; }
-    .field select option { background: var(--surface2); }
-    .submit-btn { background: var(--gold); color: #000; border: none; border-radius: 2rem; padding: 1rem 2.5rem; font-family: 'Poppins', sans-serif; font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; cursor: pointer; align-self: flex-start; transition: all .25s; }
-    .submit-btn:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(255,215,0,.3); }
-
-    /* ──── WHATSAPP FLOAT ──── */
-    .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 900; width: 58px; height: 58px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,.4); text-decoration: none; animation: wa-pulse 2.5s infinite; transition: transform .2s; }
-    .whatsapp-float:hover { transform: scale(1.12); }
-    .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
-    @keyframes wa-pulse { 0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)} 50%{box-shadow:0 4px 35px rgba(37,211,102,.7)} }
-
-    /* ──── FOOTER ──── */
-    footer { background: #050505; padding: 3.5rem 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; border-top: 1px solid rgba(255,215,0,.08); }
-    .footer-logo img { height: 52px; filter: drop-shadow(0 0 6px rgba(255,215,0,.3)); }
-    .footer-info p { font-size: .75rem; color: var(--muted); }
-    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
-    .footer-links a { font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color .3s; }
-    .footer-links a:hover { color: var(--gold); }
-
-    /* ──── ANIMATIONS ──── */
-    .reveal { opacity: 0; transform: translateY(40px); transition: opacity .7s ease, transform .7s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-delay-1 { transition-delay: .1s; }
-    .reveal-delay-2 { transition-delay: .2s; }
-    .reveal-delay-3 { transition-delay: .3s; }
-
-    /* ──── RESPONSIVE ──── */
-    @media (max-width: 900px) {
-      nav { padding: .75rem 1.5rem; }
-      .nav-links, .nav-book { display: none; }
-      .hamburger { display: flex; }
-      .portfolio-grid { grid-template-columns: 1fr 1fr; }
-      .reels-grid { grid-template-columns: 1fr 1fr; }
-      .stats-inner { grid-template-columns: repeat(2, 1fr); }
-      .about-strip { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
-      .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
-      .contact-section,.reels-section,.portfolio-section { padding: 4rem 1.5rem; }
-      footer { flex-direction: column; text-align: center; padding: 2.5rem 1.5rem; }
-      .form-row { grid-template-columns: 1fr; }
-      .lightbox-prev { left: -2rem; }
-      .lightbox-next { right: -2rem; }
-    }
-    @media (max-width: 500px) {
-      .portfolio-grid { grid-template-columns: 1fr; }
-      .reels-grid { grid-template-columns: 1fr; }
-      .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-      .stat-num { font-size: 2.5rem; }
-    }
-  </style>
 </head>
-<body>
 
-<!-- Custom Cursor -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
+<body id="top" data-theme="light">
 
-<!-- WhatsApp Float Button -->
-<a href="https://wa.me/918847487066?text=Hi%20Surya%2C%20I%20would%20like%20to%20book%20a%20photography%20session." target="_blank" class="whatsapp-float" title="Chat on WhatsApp" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+  <!-- ══════════════════════════════
+       ACCESSIBILITY SKIP LINK
+  ══════════════════════════════ -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<!-- Mobile Nav -->
-<div class="mobile-nav" id="mobileNav">
-  <button class="close-nav" id="closeNav">&times;</button>
-  <a href="#home" onclick="closeMobileNav()">Home</a>
-  <a href="#portfolio" onclick="closeMobileNav()">Portfolio</a>
-  <a href="#reels" onclick="closeMobileNav()">Reels</a>
-  <a href="#about" onclick="closeMobileNav()">About</a>
-  <a href="#contact" onclick="closeMobileNav()">Contact</a>
-  <a href="pricing.html" style="color:var(--gold);">Book Now</a>
-</div>
+  <!-- ══════════════════════════════
+       HEADER / NAVIGATION
+  ══════════════════════════════ -->
+  <header class="site-header" id="site-header" role="banner" aria-label="Site header">
+    <div class="header-inner container">
 
-<!-- Navigation -->
-<nav id="navbar">
-  <a href="#home" class="nav-logo">
-    <img src="https://i.ibb.co/7NQZfG0d/Whats-App-Image-2026-04-01-at-12-25-53-PM-1.jpg" alt="Gurudev Photography"/>
-  </a>
-  <div class="nav-links">
-    <a href="#portfolio">Portfolio</a>
-    <a href="#reels">Reels</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="about.html">About</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <a href="pricing.html#book" class="nav-book">Book Now</a>
-  <div class="hamburger" id="hamburger" onclick="openMobileNav()">
-    <span></span><span></span><span></span>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <!-- Indian Wedding Auto Slideshow -->
-  <div class="hero-slideshow" id="heroSlideshow">
-    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1583089892943-e02e5b017b6a?w=1920&q=85')"></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1596386461350-326ccb383e9f?w=1920&q=85')"></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?w=1920&q=85')"></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=1920&q=85')"></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=85')"></div>
-  </div>
-  <!-- Diya warm glow -->
-  <div class="hero-diya-glow"></div>
-  <div class="hero-particles" id="particles"></div></div>
-  <!-- Gold border lines -->
-  <div class="hero-gold-top"></div>
-  <div class="hero-gold-bottom"></div>
-
-  <!-- Paisley SVG corners -->
-  <svg class="paisley-tl" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10,10 Q60,10 80,60 Q100,110 60,140 Q20,170 10,120 Q0,70 10,10Z" fill="#FF8C00"/>
-    <path d="M30,30 Q65,20 75,70 Q85,120 55,135 Q25,150 25,100 Q25,50 30,30Z" fill="#FFD700" opacity="0.5"/>
-    <circle cx="55" cy="80" r="10" fill="#FF6B00"/>
-    <circle cx="40" cy="110" r="6" fill="#FFD700"/>
-    <path d="M15,15 L25,5 M5,25 L15,15" stroke="#FFD700" stroke-width="1.5"/>
-  </svg>
-  <svg class="paisley-tr" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10,10 Q60,10 80,60 Q100,110 60,140 Q20,170 10,120 Q0,70 10,10Z" fill="#FF8C00"/>
-    <path d="M30,30 Q65,20 75,70 Q85,120 55,135 Q25,150 25,100 Q25,50 30,30Z" fill="#FFD700" opacity="0.5"/>
-    <circle cx="55" cy="80" r="10" fill="#FF6B00"/>
-  </svg>
-  <svg class="paisley-bl" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10,10 Q60,10 80,60 Q100,110 60,140 Q20,170 10,120 Q0,70 10,10Z" fill="#8B0000"/>
-    <path d="M30,30 Q65,20 75,70 Q85,120 55,135 Q25,150 25,100 Q25,50 30,30Z" fill="#FFD700" opacity="0.4"/>
-    <circle cx="55" cy="80" r="10" fill="#FF8C00"/>
-  </svg>
-  <svg class="paisley-br" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10,10 Q60,10 80,60 Q100,110 60,140 Q20,170 10,120 Q0,70 10,10Z" fill="#8B0000"/>
-    <path d="M30,30 Q65,20 75,70 Q85,120 55,135 Q25,150 25,100 Q25,50 30,30Z" fill="#FFD700" opacity="0.4"/>
-  </svg>
-
-  <!-- Mandala watermark -->
-  <svg class="mandala-bg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="150" cy="150" r="140" stroke="#FFD700" stroke-width="1"/>
-    <circle cx="150" cy="150" r="110" stroke="#FF8C00" stroke-width="0.8"/>
-    <circle cx="150" cy="150" r="80" stroke="#FFD700" stroke-width="1"/>
-    <circle cx="150" cy="150" r="50" stroke="#FF8C00" stroke-width="0.8"/>
-    <circle cx="150" cy="150" r="20" stroke="#FFD700" stroke-width="1"/>
-    <line x1="10" y1="150" x2="290" y2="150" stroke="#FFD700" stroke-width="0.5"/>
-    <line x1="150" y1="10" x2="150" y2="290" stroke="#FFD700" stroke-width="0.5"/>
-    <line x1="51" y1="51" x2="249" y2="249" stroke="#FF8C00" stroke-width="0.5"/>
-    <line x1="249" y1="51" x2="51" y2="249" stroke="#FF8C00" stroke-width="0.5"/>
-    <polygon points="150,15 165,145 150,285 135,145" fill="none" stroke="#FFD700" stroke-width="0.6"/>
-    <polygon points="15,150 145,135 285,150 145,165" fill="none" stroke="#FFD700" stroke-width="0.6"/>
-  </svg>
-
-  <!-- Indian Wedding Floral Accents -->
-  <div class="floral-left"></div>
-  <div class="floral-right"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow">✦ Gurudev Photography — Bhadrak, Odisha ✦</p>
-    <h1 class="hero-title">
-      Stories Told in<br/><em style="color:var(--saffron);">Gold &amp; Colour</em>
-    </h1>
-    <p class="hero-sub">Capturing the grandeur of Indian weddings — from the sacred mandap fire to the joyful baraat, every emotion preserved as art.</p>
-    <div class="hero-actions">
-      <a href="#portfolio" class="btn-primary">View Gallery</a>
-      <a href="pricing.html#book" class="btn-outline">Book Your Date</a>
-    </div>
-  </div>
-  <div class="scroll-hint">
-    <span class="material-symbols-outlined">keyboard_arrow_down</span>
-    Scroll
-  </div>
-</section>
-
-<!-- STATS -->
-<section class="stats-section" id="stats">
-  <div class="stats-inner">
-    <div class="stat reveal"><div class="stat-num">500+</div><div class="stat-lbl">Sessions</div></div>
-    <div class="stat reveal reveal-delay-1"><div class="stat-num">200+</div><div class="stat-lbl">Weddings</div></div>
-    <div class="stat reveal reveal-delay-2"><div class="stat-num">10+</div><div class="stat-lbl">Years</div></div>
-    <div class="stat reveal reveal-delay-3"><div class="stat-num">5★</div><div class="stat-lbl">Rating</div></div>
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section class="portfolio-section" id="portfolio">
-  <div class="portfolio-inner">
-    <div class="portfolio-header reveal">
-      <div>
-        <p class="section-label">✦ Indian Wedding Gallery</p>
-        <h2 class="section-title">Our <em>Weddings</em></h2>
-      </div>
-      <div class="category-tabs">
-        <button class="tab active" onclick="filterGallery('all', this)">All</button>
-        <button class="tab" onclick="filterGallery('wedding', this)">💒 Wedding</button>
-        <button class="tab" onclick="filterGallery('prewedding', this)">💑 Pre-Wedding</button>
-        <button class="tab" onclick="filterGallery('haldi', this)">🌼 Haldi</button>
-        <button class="tab" onclick="filterGallery('mehndi', this)">🌸 Mehndi</button>
-        <button class="tab" onclick="filterGallery('baraat', this)">🎺 Baraat</button>
-        <button class="tab" onclick="filterGallery('reception', this)">💃 Reception</button>
-      </div>
-    </div>
-
-    <div class="portfolio-grid" id="photoGrid">
-      <!-- Photos rendered by JS -->
-    </div>
-
-    <div style="text-align:center;margin-top:3rem;" class="reveal">
-      <a href="gallery.html" class="btn-outline">View Full Gallery</a>
-    </div>
-  </div>
-</section>
-
-<!-- REELS / VIDEOS -->
-<section class="reels-section" id="reels">
-  <div class="reels-inner">
-    <div class="reveal">
-      <p class="section-label">Behind the Lens</p>
-      <h2 class="section-title"><em>Reels</em> & Videos</h2>
-      <p style="color:var(--muted);font-size:.9rem;max-width:500px;line-height:1.8;margin-top:.5rem;">Cinematic moments captured in motion. Short film stories from our sessions.</p>
-    </div>
-    <div class="reels-grid">
-      <div class="reel-card reveal">
-        <div class="reel-placeholder">
-          <div class="reel-play"><span class="material-symbols-outlined">play_arrow</span></div>
-          <p class="reel-title">Wedding Reel</p>
-        </div>
-        <span class="reel-badge">New</span>
-      </div>
-      <div class="reel-card reveal reveal-delay-1">
-        <div class="reel-placeholder">
-          <div class="reel-play"><span class="material-symbols-outlined">play_arrow</span></div>
-          <p class="reel-title">Pre-Wedding</p>
-        </div>
-      </div>
-      <div class="reel-card reveal reveal-delay-2">
-        <div class="reel-placeholder">
-          <div class="reel-play"><span class="material-symbols-outlined">play_arrow</span></div>
-          <p class="reel-title">Highlights</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT STRIP -->
-<section id="about">
-  <div class="about-strip">
-    <div class="about-image reveal">
-      <span class="material-symbols-outlined">person</span>
-      <p style="font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,215,0,.35);">Surya Narayan Behera</p>
-    </div>
-    <div class="about-text reveal reveal-delay-1">
-      <p class="section-label">The Photographer</p>
-      <h2>Surya Narayan <em>Behera</em></h2>
-      <p>Based in Bhadrak, Odisha, Surya Narayan Behera is more than a photographer — he is a visual storyteller who translates human emotion into timeless digital artifacts.</p>
-      <p>With over a decade of dedicated practice, Surya has developed a signature style defined by atmospheric depth, authentic candid moments, and the ability to capture the quiet moments that define a legacy.</p>
-      <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap;">
-        <a href="about.html" class="btn-primary">Read More</a>
-        <a href="pricing.html" class="btn-outline">View Packages</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
-  <div class="contact-inner">
-    <div class="contact-info">
-      <div class="reveal">
-        <p class="section-label">Get In Touch</p>
-        <h2 class="section-title">Book Your <em>Session</em></h2>
-      </div>
-      <div class="cinfo-item reveal">
-        <div class="cinfo-icon"><span class="material-symbols-outlined">call</span></div>
-        <div>
-          <p class="cinfo-label">Phone / WhatsApp</p>
-          <p class="cinfo-value"><a href="tel:+918847487066">+91 88474 87066</a></p>
-        </div>
-      </div>
-      <div class="cinfo-item reveal reveal-delay-1">
-        <div class="cinfo-icon"><span class="material-symbols-outlined">mail</span></div>
-        <div>
-          <p class="cinfo-label">Email</p>
-          <p class="cinfo-value"><a href="mailto:Suryabehera533@gmail.com">Suryabehera533@gmail.com</a></p>
-        </div>
-      </div>
-      <div class="cinfo-item reveal reveal-delay-2">
-        <div class="cinfo-icon"><span class="material-symbols-outlined">location_on</span></div>
-        <div>
-          <p class="cinfo-label">Studio Location</p>
-          <p class="cinfo-value">Bhadrak, Odisha, India</p>
-        </div>
-      </div>
-      <a href="https://wa.me/918847487066?text=Hi%20Surya%2C%20I%20want%20to%20book%20a%20session." target="_blank" class="btn-primary reveal reveal-delay-3" style="display:inline-flex;align-items:center;gap:.5rem;width:fit-content;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Chat on WhatsApp
+      <!-- Logo -->
+      <a href="/" class="nav-logo" aria-label="Gurudev Photography — Home">
+        <span class="logo-icon" aria-hidden="true">📷</span>
+        <span class="logo-text">
+          <strong>Gurudev</strong>
+          <small>Photography</small>
+        </span>
       </a>
+
+      <!-- Search Bar -->
+      <div class="header-search" role="search" aria-label="Site search">
+        <input
+          type="search"
+          id="site-search"
+          placeholder="Search (e.g. wedding packages…)"
+          aria-label="Search the website"
+          autocomplete="off"
+        />
+        <button type="button" onclick="performSearch()" aria-label="Submit search">
+          <span aria-hidden="true">🔍</span>
+        </button>
+        <div id="search-results" class="search-dropdown" role="listbox" aria-label="Search results" hidden></div>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <ul role="list">
+          <li><a href="#hero"         class="nav-link active" aria-current="page">Home</a></li>
+          <li><a href="#services"     class="nav-link">Services</a></li>
+          <li><a href="#portfolio"    class="nav-link">Portfolio</a></li>
+          <li><a href="#about"        class="nav-link">About</a></li>
+          <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+          <li><a href="#blog"         class="nav-link">Blog</a></li>
+          <li><a href="#contact"      class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary nav-cta" aria-label="Book a photography session">
+          Book Now
+        </a>
+      </nav>
+
+      <!-- Controls -->
+      <div class="header-controls">
+        <button
+          id="theme-toggle"
+          class="theme-btn"
+          aria-label="Toggle dark mode"
+          title="Toggle dark/light mode"
+        >
+          <span class="theme-icon light-icon" aria-hidden="true">☀️</span>
+          <span class="theme-icon dark-icon"  aria-hidden="true">🌙</span>
+        </button>
+        <button
+          id="menu-toggle"
+          class="hamburger"
+          aria-label="Open mobile menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
 
-    <form class="contact-form reveal" onsubmit="submitForm(event)">
-      <div class="form-row">
-        <div class="field">
-          <label for="fn">Full Name</label>
-          <input id="fn" type="text" placeholder="Your name" required autocomplete="name"/>
+    <!-- Mobile Nav Drawer -->
+    <nav
+      id="mobile-nav"
+      class="mobile-nav"
+      aria-label="Mobile navigation"
+      aria-hidden="true"
+    >
+      <ul role="list">
+        <li><a href="#hero"         class="mobile-nav-link" onclick="closeMobileNav()">🏠 Home</a></li>
+        <li><a href="#services"     class="mobile-nav-link" onclick="closeMobileNav()">🎯 Services</a></li>
+        <li><a href="#portfolio"    class="mobile-nav-link" onclick="closeMobileNav()">🖼️ Portfolio</a></li>
+        <li><a href="#about"        class="mobile-nav-link" onclick="closeMobileNav()">👤 About</a></li>
+        <li><a href="#testimonials" class="mobile-nav-link" onclick="closeMobileNav()">⭐ Reviews</a></li>
+        <li><a href="#blog"         class="mobile-nav-link" onclick="closeMobileNav()">📝 Blog</a></li>
+        <li><a href="#contact"      class="mobile-nav-link" onclick="closeMobileNav()">📞 Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary mobile-cta" onclick="closeMobileNav()">📅 Book a Session</a>
+    </nav>
+  </header>
+
+  <!-- ══════════════════════════════
+       BREADCRUMB NAV
+  ══════════════════════════════ -->
+  <nav class="breadcrumb-nav container" aria-label="Breadcrumb navigation">
+    <ol class="breadcrumb" role="list" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">Wedding Photographer Bhadrak</span>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+  </nav>
+
+  <!-- ══════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════ -->
+  <main id="main-content" role="main">
+
+    <!-- ── HERO SECTION ── -->
+    <section
+      id="hero"
+      class="hero-section"
+      aria-label="Hero — Gurudev Photography"
+      itemscope itemtype="https://schema.org/ImageObject"
+    >
+      <div class="hero-bg" aria-hidden="true">
+
+        <!-- Layer 0: Real photo background with Ken Burns animation -->
+        <div
+          class="hero-bg-photo"
+          role="img"
+          aria-label="Indian temple wedding backdrop — Gurudev Photography, Bhadrak Odisha"
+          itemprop="url"
+          content="hero-bg.png"
+        ></div>
+
+        <!-- Layer 1: Smart readability overlay (top/bottom dark, sides vignette) -->
+        <div class="hero-overlay"></div>
+
+        <!-- Layer 2: Brand colour-grade tint (purple/gold) -->
+        <div class="hero-gradient"></div>
+
+        <!-- Layer 3: Warm golden glow at base — complements sunset in photo -->
+        <div class="hero-glow"></div>
+
+        <!-- Layer 4: Light-leak shimmer animation -->
+        <div class="hero-shimmer"></div>
+
+        <!-- Layer 5: Soft animated shape blobs (very subtle on real photo) -->
+        <div class="hero-shapes" aria-hidden="true">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+          <div class="shape shape-4"></div>
         </div>
-        <div class="field">
-          <label for="ph">Phone</label>
-          <input id="ph" type="tel" placeholder="+91 XXXXX XXXXX" autocomplete="tel"/>
+
+      </div>
+
+      <div class="hero-content container">
+        <!-- Rating badge -->
+        <div class="hero-badge animate-fade-up" aria-label="5 star rated photographer">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span>5.0 — 87 Reviews on Google</span>
         </div>
-      </div>
-      <div class="form-row">
-        <div class="field">
-          <label for="em">Email</label>
-          <input id="em" type="email" placeholder="your@email.com" autocomplete="email"/>
+
+        <!-- H1 — Primary keyword target -->
+        <h1 class="hero-title animate-fade-up" itemprop="name">
+          Best Wedding Photographer
+          <em>in Bhadrak, Odisha</em>
+        </h1>
+
+        <p class="hero-tagline animate-fade-up" itemprop="description">
+          Capturing the grandeur of Indian weddings — from the sacred mandap fire to the joyful baraat.
+          Every emotion, beautifully preserved as timeless art.
+        </p>
+
+        <!-- Hero Stats -->
+        <div class="hero-stats animate-fade-up" role="list" aria-label="Photographer statistics">
+          <div class="stat" role="listitem">
+            <span class="stat-num" data-count="500">0</span><span>+</span>
+            <span class="stat-label">Sessions</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat" role="listitem">
+            <span class="stat-num" data-count="200">0</span><span>+</span>
+            <span class="stat-label">Weddings</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat" role="listitem">
+            <span class="stat-num" data-count="10">0</span><span>+</span>
+            <span class="stat-label">Years</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat" role="listitem">
+            <span class="stat-num">5</span><span>★</span>
+            <span class="stat-label">Rating</span>
+          </div>
         </div>
-        <div class="field">
-          <label for="dt">Event Date</label>
-          <input id="dt" type="date"/>
-        </div>
-      </div>
-      <div class="field">
-        <label for="pkg">Package</label>
-        <select id="pkg">
-          <option value="">Select a package...</option>
-          <option>Essentials — ₹5,000</option>
-          <option>Signature — ₹12,000</option>
-          <option>Legacy — ₹25,000</option>
-          <option>Custom / Enquire</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="msg">Message</label>
-        <textarea id="msg" placeholder="Tell us about your event, location, and special requirements..."></textarea>
-      </div>
-      <button type="submit" class="submit-btn">Send Enquiry →</button>
-      <p id="formSuccess" style="display:none;color:#4caf50;font-size:.85rem;margin-top:.5rem;">✓ Thank you! Surya will contact you within 24 hours.</p>
-    </form>
-  </div>
-</section>
 
-<!-- FOOTER -->
-<div class="india-strip"></div>
-<footer>
-  <a href="#home"><img src="https://i.ibb.co/7NQZfG0d/Whats-App-Image-2026-04-01-at-12-25-53-PM-1.jpg" alt="Gurudev Photography" style="height:52px;filter:drop-shadow(0 0 6px rgba(255,215,0,.3));"/></a>
-  <div class="footer-info">
-    <p>© 2026 Gurudev Photography by Surya Narayan Behera</p>
-    <p>Bhadrak, Odisha, India</p>
-  </div>
-  <div class="footer-links">
-    <a href="#portfolio">Portfolio</a>
-    <a href="#reels">Reels</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="about.html">About</a>
-    <a href="index.html">Dashboard</a>
-  </div>
-</footer>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-  <div class="lightbox-content">
-    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-    <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1)"><span class="material-symbols-outlined">chevron_left</span></button>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="Photo"/>
-    <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1)"><span class="material-symbols-outlined">chevron_right</span></button>
-  </div>
-</div>
-
-<script>
-// ── CUSTOM CURSOR ──
-const cur = document.getElementById('cursor');
-const ring = document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove', e=>{ mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
-(function animRing(){ rx+=(mx-rx)*.12; ry+=(my-ry)*.12; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(animRing); })();
-
-// ── NAVBAR SCROLL ──
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', ()=>{ navbar.classList.toggle('scrolled', window.scrollY>60); });
-
-// ── MOBILE NAV ──
-function openMobileNav(){ document.getElementById('mobileNav').classList.add('open'); }
-function closeMobileNav(){ document.getElementById('mobileNav').classList.remove('open'); }
-document.getElementById('closeNav').onclick = closeMobileNav;
-
-// 🔥 INDIAN WEDDING AUTO SLIDESHOW ──
-(function(){
-  const slides = document.querySelectorAll('.hero-slide');
-  let cur = 0;
-  setInterval(()=>{
-    slides[cur].classList.remove('active');
-    cur = (cur + 1) % slides.length;
-    slides[cur].classList.add('active');
-  }, 5000);
-})();
-
-// ── HERO PARTICLES ──
-const pContainer = document.getElementById('particles');
-for(let i=0;i<35;i++){
-  const s = document.createElement('span');
-  s.style.cssText = `left:${Math.random()*100}%;animation-duration:${8+Math.random()*15}s;animation-delay:${Math.random()*-20}s;width:${1+Math.random()*2}px;height:${1+Math.random()*2}px;opacity:${0.2+Math.random()*.5}`;
-  pContainer.appendChild(s);
-}
-
-// ── GALLERY DATA — Indian Wedding Theme ──
-const photos = [
-  {cat:'wedding',  label:'Wedding Ceremony', caption:'Sacred Mandap Rituals',
-   src:'https://images.unsplash.com/photo-1583089892943-e02e5b017b6a?w=600&q=80'},
-  {cat:'wedding',  label:'Wedding', caption:'Bride in Red Lehenga',
-   src:'https://images.unsplash.com/photo-1596386461350-326ccb383e9f?w=600&q=80'},
-  {cat:'baraat',   label:'Baraat', caption:'Groom on White Horse',
-   src:'https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?w=600&q=80'},
-  {cat:'haldi',    label:'Haldi Ceremony', caption:'Golden Haldi Moments',
-   src:'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80'},
-  {cat:'mehndi',   label:'Mehndi Night', caption:'Intricate Mehndi Art',
-   src:'https://images.unsplash.com/photo-1588776814546-1ffbb9d10c53?w=600&q=80'},
-  {cat:'reception',label:'Reception', caption:'Grand Reception Evening',
-   src:'https://images.unsplash.com/photo-1605723517503-3cadb5818a0e?w=600&q=80'},
-  {cat:'prewedding',label:'Pre-Wedding', caption:'Love in Golden Light',
-   src:'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80'},
-  {cat:'wedding',  label:'Wedding', caption:'Heavy Gold Bridal Jewellery',
-   src:'https://images.unsplash.com/photo-1600091166971-7f9faad6c310?w=600&q=80'},
-  {cat:'wedding',  label:'Wedding', caption:'Couple Under Floral Arch',
-   src:'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&q=80'},
-  {cat:'wedding',  label:'Wedding', caption:'Diya & Sacred Rituals',
-   src:'https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=600&q=80'},
-  {cat:'reception',label:'Reception', caption:'Sangeet Dance Night',
-   src:'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80'},
-  {cat:'wedding',  label:'Wedding', caption:'Marigold Mandap — Aerial View',
-   src:'https://images.unsplash.com/photo-1468817814611-b7edf94b5d60?w=600&q=80'},
-];
-
-let currentPhotoIndex = 0;
-const grid = document.getElementById('photoGrid');
-
-function renderGallery(filter='all'){
-  const filtered = filter==='all' ? photos : photos.filter(p=>p.cat===filter);
-  grid.innerHTML = filtered.map((p,i)=>{
-    const idx = photos.indexOf(p);
-    const wide = !p.src && (i===0 || i===4);
-    const inner = p.src
-      ? `<img src="${p.src}" alt="${p.caption} — Gurudev Photography, Bhadrak" loading="lazy"/>`
-      : `<div class="photo-placeholder">
-        <span class="material-symbols-outlined">photo_camera</span>
-        <span>${p.label}</span>
-      </div>`;
-    const cap = p.temp ? `${p.caption} <span style="opacity:.75;font-size:.65rem;">(temp)</span>` : p.caption;
-    return `
-    <div class="photo-card ${wide?'wide':''}" onclick="openLightbox(${idx})" data-cat="${p.cat}">
-      ${inner}
-      <div class="photo-overlay">
-        <div>
-          <p class="photo-label">${p.label}</p>
-          <p class="photo-caption">${cap}</p>
+        <!-- CTAs -->
+        <div class="hero-ctas animate-fade-up">
+          <a
+            href="#portfolio"
+            class="btn btn-primary btn-lg"
+            aria-label="View our wedding photography portfolio"
+          >
+            View Our Work
+          </a>
+          <a
+            href="#contact"
+            class="btn btn-outline btn-lg"
+            aria-label="Book a photography session with Surya Narayan Behera"
+          >
+            Book Your Date 📅
+          </a>
         </div>
       </div>
-    </div>`;
-  }).join('');
-}
-renderGallery();
 
-function filterGallery(cat, btn){
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  btn.classList.add('active');
-  renderGallery(cat);
-}
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <span class="scroll-dot"></span>
+      </div>
+    </section>
 
-// ── LIGHTBOX ──
-function openLightbox(i){
-  currentPhotoIndex = i;
-  const ph = photos[i];
-  document.getElementById('lightboxImg').src = ph.src
-    ? ph.src
-    : 'https://via.placeholder.com/900x600/1e1e1e/ffd700?text='+encodeURIComponent(ph.caption);
-  document.getElementById('lightboxImg').alt = ph.caption + (ph.temp ? ' (temp)' : '') + ' — Gurudev Photography';
-  document.getElementById('lightbox').classList.add('open');
-}
-function closeLightbox(e){ if(!e||e.target===document.getElementById('lightbox'))document.getElementById('lightbox').classList.remove('open'); }
-function lightboxNav(dir){ currentPhotoIndex=(currentPhotoIndex+dir+photos.length)%photos.length; openLightbox(currentPhotoIndex); }
-document.addEventListener('keydown',e=>{ if(e.key==='Escape')document.getElementById('lightbox').classList.remove('open'); if(e.key==='ArrowLeft')lightboxNav(-1); if(e.key==='ArrowRight')lightboxNav(1); });
+    <!-- ── SERVICES SECTION ── -->
+    <section
+      id="services"
+      class="services-section section-padding"
+      aria-label="Photography services"
+      itemscope itemtype="https://schema.org/Service"
+    >
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">What We Offer</span>
+          <h2 class="section-title">
+            Photography <em>Services</em> in Bhadrak, Odisha
+          </h2>
+          <p class="section-sub">
+            From intimate mehendi ceremonies to grand reception nights — we cover every moment
+            with cinematic precision and heartfelt authenticity.
+          </p>
+        </header>
 
-// ── SCROLL REVEAL ──
-const observer = new IntersectionObserver(entries=>entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+        <div class="services-grid" role="list">
 
-// ── CONTACT FORM ──
-function submitForm(e){
-  e.preventDefault();
-  document.getElementById('formSuccess').style.display='block';
-  e.target.reset();
-  setTimeout(()=>document.getElementById('formSuccess').style.display='none',5000);
-}
-</script>
+          <!-- Service Card -->
+          <article class="service-card reveal" role="listitem" itemscope itemtype="https://schema.org/Service">
+            <div class="service-icon" aria-hidden="true">💒</div>
+            <h3 class="service-title" itemprop="name">
+              <a href="/services/wedding-photography-bhadrak">Wedding Photography</a>
+            </h3>
+            <p class="service-desc" itemprop="description">
+              Full-day cinematic wedding coverage capturing every sacred ritual — from haldi and mehndi to the grand mandap ceremony and baraat.
+            </p>
+            <div class="service-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+              <span>From </span>
+              <strong itemprop="price">₹5,000</strong>
+              <meta itemprop="priceCurrency" content="INR" />
+            </div>
+            <a href="#contact" class="service-link" aria-label="Enquire about wedding photography">
+              Enquire Now →
+            </a>
+          </article>
+
+          <article class="service-card reveal" role="listitem" itemscope itemtype="https://schema.org/Service">
+            <div class="service-icon" aria-hidden="true">💑</div>
+            <h3 class="service-title" itemprop="name">
+              <a href="/services/pre-wedding-photography-odisha">Pre-Wedding Shoots</a>
+            </h3>
+            <p class="service-desc" itemprop="description">
+              Romantic pre-wedding sessions at stunning Odisha locations. Storytelling portraits that capture your love before the big day.
+            </p>
+            <div class="service-price">
+              <span>From </span><strong>₹3,000</strong>
+            </div>
+            <a href="#contact" class="service-link">Enquire Now →</a>
+          </article>
+
+          <article class="service-card reveal" role="listitem" itemscope itemtype="https://schema.org/Service">
+            <div class="service-icon" aria-hidden="true">🎬</div>
+            <h3 class="service-title" itemprop="name">
+              <a href="/services/cinematic-wedding-films">Cinematic Wedding Films</a>
+            </h3>
+            <p class="service-desc" itemprop="description">
+              Hollywood-style wedding films with cinematic grading, original music, and emotional storytelling. Relive your wedding day, forever.
+            </p>
+            <div class="service-price">
+              <span>From </span><strong>₹8,000</strong>
+            </div>
+            <a href="#contact" class="service-link">Enquire Now →</a>
+          </article>
+
+          <article class="service-card reveal" role="listitem" itemscope itemtype="https://schema.org/Service">
+            <div class="service-icon" aria-hidden="true">👶</div>
+            <h3 class="service-title" itemprop="name">
+              <a href="/services/baby-photography-bhadrak">Baby & Kids Photography</a>
+            </h3>
+            <p class="service-desc" itemprop="description">
+              Adorable newborn and kids photography sessions in our studio or at your home. Precious milestones, beautifully captured.
+            </p>
+            <div class="service-price">
+              <span>From </span><strong>₹2,500</strong>
+            </div>
+            <a href="#contact" class="service-link">Enquire Now →</a>
+          </article>
+
+          <article class="service-card reveal" role="listitem" itemscope itemtype="https://schema.org/Service">
+            <div class="service-icon" aria-hidden="true">🎪</div>
+            <h3 class="service-title" itemprop="name">
+              <a href="/services/event-photography-odisha">Event Photography</a>
+            </h3>
+            <p class="service-desc" itemprop="description">
+              Corporate events, birthday parties, engagements, and cultural celebrations. Professional coverage for every occasion.
+            </p>
+            <div class="service-price">
+              <span>From </span><strong>₹3,500</strong>
+            </div>
+            <a href="#contact" class="service-link">Enquire Now →</a>
+          </article>
+
+          <article class="service-card reveal" role="listitem" itemscope itemtype="https://schema.org/Service">
+            <div class="service-icon" aria-hidden="true">🚁</div>
+            <h3 class="service-title" itemprop="name">
+              <a href="/services/drone-photography-odisha">Drone Aerial Shots</a>
+            </h3>
+            <p class="service-desc" itemprop="description">
+              Stunning aerial perspectives of your wedding venue and procession. Available as an add-on to any Legacy package booking.
+            </p>
+            <div class="service-price">
+              <span>Add-on </span><strong>₹2,000</strong>
+            </div>
+            <a href="#contact" class="service-link">Enquire Now →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PORTFOLIO SECTION ── -->
+    <section
+      id="portfolio"
+      class="portfolio-section section-padding"
+      aria-label="Photography portfolio"
+    >
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Our Work</span>
+          <h2 class="section-title">Wedding <em>Portfolio</em> — Bhadrak &amp; Odisha</h2>
+          <p class="section-sub">A glimpse of the stories we have had the honour to tell.</p>
+        </header>
+
+        <!-- Filter Tabs -->
+        <div class="portfolio-filters" role="tablist" aria-label="Filter portfolio by category">
+          <button class="filter-btn active" role="tab" aria-selected="true"  onclick="filterPortfolio('all')"       >All</button>
+          <button class="filter-btn"        role="tab" aria-selected="false" onclick="filterPortfolio('wedding')"   >💒 Wedding</button>
+          <button class="filter-btn"        role="tab" aria-selected="false" onclick="filterPortfolio('prewed')"    >💑 Pre-Wedding</button>
+          <button class="filter-btn"        role="tab" aria-selected="false" onclick="filterPortfolio('haldi')"     >🌼 Haldi</button>
+          <button class="filter-btn"        role="tab" aria-selected="false" onclick="filterPortfolio('reception')">💃 Reception</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid" id="portfolio-grid" role="list" aria-label="Portfolio images">
+
+          <figure class="p-card reveal" data-category="wedding" role="listitem">
+            <div class="p-card-img" style="background:linear-gradient(135deg,#c2185b,#880e4f);" role="img" aria-label="Indian wedding mandap ceremony photography by Gurudev Photography">
+              <span aria-hidden="true">💒</span>
+            </div>
+            <figcaption class="p-card-info">
+              <span class="p-cat">Wedding</span>
+              <span class="p-title">Sacred Mandap Ceremony</span>
+            </figcaption>
+          </figure>
+
+          <figure class="p-card reveal" data-category="prewed" role="listitem">
+            <div class="p-card-img" style="background:linear-gradient(135deg,#1565c0,#0d47a1);" role="img" aria-label="Pre-wedding photography in Bhubaneswar Odisha">
+              <span aria-hidden="true">💑</span>
+            </div>
+            <figcaption class="p-card-info">
+              <span class="p-cat">Pre-Wedding</span>
+              <span class="p-title">Golden Hour Portraits</span>
+            </figcaption>
+          </figure>
+
+          <figure class="p-card reveal" data-category="haldi" role="listitem">
+            <div class="p-card-img" style="background:linear-gradient(135deg,#f57f17,#e65100);" role="img" aria-label="Haldi ceremony photography Bhadrak">
+              <span aria-hidden="true">🌼</span>
+            </div>
+            <figcaption class="p-card-info">
+              <span class="p-cat">Haldi</span>
+              <span class="p-title">Joyful Haldi Moments</span>
+            </figcaption>
+          </figure>
+
+          <figure class="p-card reveal" data-category="wedding" role="listitem">
+            <div class="p-card-img" style="background:linear-gradient(135deg,#4a148c,#6a1b9a);" role="img" aria-label="Baraat wedding procession photography Odisha">
+              <span aria-hidden="true">🎺</span>
+            </div>
+            <figcaption class="p-card-info">
+              <span class="p-cat">Baraat</span>
+              <span class="p-title">Grand Baraat Procession</span>
+            </figcaption>
+          </figure>
+
+          <figure class="p-card reveal" data-category="reception" role="listitem">
+            <div class="p-card-img" style="background:linear-gradient(135deg,#1b5e20,#2e7d32);" role="img" aria-label="Wedding reception photography Bhadrak Odisha">
+              <span aria-hidden="true">💃</span>
+            </div>
+            <figcaption class="p-card-info">
+              <span class="p-cat">Reception</span>
+              <span class="p-title">Glamorous Reception Night</span>
+            </figcaption>
+          </figure>
+
+          <figure class="p-card reveal" data-category="prewed" role="listitem">
+            <div class="p-card-img" style="background:linear-gradient(135deg,#37474f,#263238);" role="img" aria-label="Cinematic pre-wedding film Odisha">
+              <span aria-hidden="true">🎬</span>
+            </div>
+            <figcaption class="p-card-info">
+              <span class="p-cat">Cinematic</span>
+              <span class="p-title">Cinematic Love Story</span>
+            </figcaption>
+          </figure>
+
+        </div>
+
+        <div class="text-center" style="margin-top:48px;">
+          <a href="/portfolio" class="btn btn-primary" aria-label="View full photography portfolio">
+            View Full Portfolio
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PACKAGES / PRICING ── -->
+    <section
+      id="packages"
+      class="packages-section section-padding"
+      aria-label="Photography pricing packages"
+    >
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Transparent Pricing</span>
+          <h2 class="section-title">Wedding Photography <em>Packages</em></h2>
+          <p class="section-sub">No hidden charges. Choose the package that fits your love story.</p>
+        </header>
+
+        <div class="packages-grid" role="list" aria-label="Photography packages">
+
+          <article class="pkg-card reveal" role="listitem" itemscope itemtype="https://schema.org/Offer">
+            <div class="pkg-tier">Essentials</div>
+            <div class="pkg-price" itemprop="price" content="5000">
+              ₹5,000
+              <meta itemprop="priceCurrency" content="INR" />
+            </div>
+            <div class="pkg-label">Per Event</div>
+            <ul class="pkg-features" role="list">
+              <li>✦ Full-day photography</li>
+              <li>✦ 200+ edited photos</li>
+              <li>✦ Online gallery</li>
+              <li>✦ 1 month delivery</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline pkg-btn" aria-label="Book Essentials package">Book Essentials</a>
+          </article>
+
+          <article class="pkg-card pkg-featured reveal" role="listitem" itemscope itemtype="https://schema.org/Offer">
+            <div class="pkg-badge">Most Popular ⭐</div>
+            <div class="pkg-tier">Signature</div>
+            <div class="pkg-price" itemprop="price" content="12000">
+              ₹12,000
+              <meta itemprop="priceCurrency" content="INR" />
+            </div>
+            <div class="pkg-label">Per Event</div>
+            <ul class="pkg-features" role="list">
+              <li>✦ Two-day coverage</li>
+              <li>✦ 500+ edited photos</li>
+              <li>✦ Cinematic highlight reel</li>
+              <li>✦ Premium album (30 pages)</li>
+              <li>✦ Priority delivery</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary pkg-btn" aria-label="Book Signature package">Book Signature</a>
+          </article>
+
+          <article class="pkg-card reveal" role="listitem" itemscope itemtype="https://schema.org/Offer">
+            <div class="pkg-tier">Legacy</div>
+            <div class="pkg-price" itemprop="price" content="25000">
+              ₹25,000
+              <meta itemprop="priceCurrency" content="INR" />
+            </div>
+            <div class="pkg-label">Full Suite</div>
+            <ul class="pkg-features" role="list">
+              <li>✦ All event functions</li>
+              <li>✦ 1000+ edited photos</li>
+              <li>✦ Full cinematic film</li>
+              <li>✦ Drone aerial shots</li>
+              <li>✦ Luxury hardbound album</li>
+              <li>✦ Second shooter included</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline pkg-btn" aria-label="Book Legacy package">Book Legacy</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT SECTION ── -->
+    <section
+      id="about"
+      class="about-section section-padding"
+      aria-label="About Surya Narayan Behera"
+      itemscope itemtype="https://schema.org/Person"
+    >
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <div class="about-img-wrap" role="img" aria-label="Surya Narayan Behera — Lead Photographer at Gurudev Photography">
+            <div class="about-img-placeholder" aria-hidden="true">
+              <span>📷</span>
+              <small>Surya Narayan Behera</small>
+            </div>
+          </div>
+          <div class="about-years-badge" aria-label="10 plus years of photography experience">
+            <span class="big">10+</span>
+            <span class="sm">Years</span>
+          </div>
+        </div>
+
+        <div class="about-body reveal">
+          <span class="section-tag">Behind the Lens</span>
+          <h2 class="section-title" itemprop="name">
+            Surya Narayan <em>Behera</em>
+          </h2>
+          <p itemprop="description">
+            Based in <strong>Bhadrak, Odisha</strong>, Surya Narayan Behera has spent over a decade documenting the grandeur of Indian weddings — from the sacred fire of the mandap to the joyful chaos of the baraat.
+          </p>
+          <p>
+            His signature style blends cinematic depth with authentic human emotion, creating <strong>timeless wedding stories</strong> that families treasure for generations. With 200+ weddings and a 5★ Google rating, Gurudev Photography is Odisha's trusted choice.
+          </p>
+
+          <!-- Award badges -->
+          <div class="about-badges" aria-label="Awards and achievements">
+            <div class="badge-item">🏆 <span>Top Photographer<br/><small>Odisha 2024</small></span></div>
+            <div class="badge-item">⭐ <span>5★ Google<br/><small>87 Reviews</small></span></div>
+            <div class="badge-item">📸 <span>500+ Sessions<br/><small>Delivered</small></span></div>
+          </div>
+
+          <div class="about-ctas">
+            <a href="#contact" class="btn btn-primary">Book a Session</a>
+            <a href="#portfolio" class="btn btn-ghost">View Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TESTIMONIALS ── -->
+    <section
+      id="testimonials"
+      class="testimonials-section section-padding"
+      aria-label="Customer reviews and testimonials"
+    >
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">What Couples Say</span>
+          <h2 class="section-title">⭐ 5-Star Reviews — <em>Gurudev Photography</em></h2>
+          <p class="section-sub">Trusted by hundreds of families across Bhadrak and Odisha.</p>
+        </header>
+
+        <div class="testimonials-grid" role="list" aria-label="Customer testimonials">
+
+          <article class="testi-card reveal" role="listitem" itemscope itemtype="https://schema.org/Review">
+            <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="testi-text" itemprop="reviewBody">
+              "Surya captured our wedding day so beautifully. Every emotion, every ritual — perfectly preserved. The cinematic film made us cry happy tears. <strong>Highly recommend!</strong>"
+            </blockquote>
+            <footer class="testi-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <div class="testi-avatar" aria-hidden="true">P</div>
+              <div>
+                <cite itemprop="name">Priya Mohapatra</cite>
+                <span>Bhubaneswar Wedding · 2025</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testi-card reveal" role="listitem" itemscope itemtype="https://schema.org/Review">
+            <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="testi-text" itemprop="reviewBody">
+              "We booked the Legacy package for our daughter's wedding and it was the best decision. The drone shots of the venue were breathtaking. <strong>Value for money!</strong>"
+            </blockquote>
+            <footer class="testi-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <div class="testi-avatar" aria-hidden="true">R</div>
+              <div>
+                <cite itemprop="name">Ramesh Dash</cite>
+                <span>Bhadrak Wedding · 2024</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testi-card reveal" role="listitem" itemscope itemtype="https://schema.org/Review">
+            <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="testi-text" itemprop="reviewBody">
+              "Surya's pre-wedding shoot at Chilika Lake was magical. He knows exactly how to make you feel comfortable and the results were stunning. <strong>Pure art!</strong>"
+            </blockquote>
+            <footer class="testi-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <div class="testi-avatar" aria-hidden="true">A</div>
+              <div>
+                <cite itemprop="name">Anjali & Saurav</cite>
+                <span>Pre-Wedding · Chilika Lake · 2025</span>
+              </div>
+            </footer>
+          </article>
+
+        </div>
+
+        <!-- Review CTA -->
+        <div class="text-center" style="margin-top:40px;">
+          <a href="https://g.page/gurudevphotography/review" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" aria-label="Leave a Google review for Gurudev Photography">
+            Leave a Google Review ⭐
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ SECTION ── -->
+    <section
+      id="faq"
+      class="faq-section section-padding"
+      aria-label="Frequently asked questions"
+    >
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">FAQ</span>
+          <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
+          <p class="section-sub">Everything you need to know before booking your wedding photographer.</p>
+        </header>
+
+        <div class="faq-list" role="list">
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false" onclick="toggleFAQ(this)">
+              <span>How much does a wedding photographer cost in Bhadrak, Odisha?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>Our wedding photography packages start from <strong>₹5,000</strong> for the Essentials package, <strong>₹12,000</strong> for Signature, and <strong>₹25,000</strong> for the all-inclusive Legacy package. Custom pricing is also available for multi-day events.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false" onclick="toggleFAQ(this)">
+              <span>How far in advance should I book a wedding photographer?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>We recommend booking at least <strong>3–6 months in advance</strong>, especially for peak wedding season (October–February). Popular dates fill up quickly, so early booking secures your date and avoids disappointment.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false" onclick="toggleFAQ(this)">
+              <span>Do you travel outside Bhadrak for weddings?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>Yes! Surya covers weddings across all of Odisha including <strong>Bhubaneswar, Cuttack, Puri, Balasore, Kendrapara, and Jajpur</strong>. Outstation travel charges apply for destinations beyond 50km from Bhadrak.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false" onclick="toggleFAQ(this)">
+              <span>How long does it take to receive edited wedding photos?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>Edited gallery delivery typically takes <strong>3–4 weeks</strong> for standard packages and <strong>1–2 weeks</strong> for priority packages. Cinematic films take 4–6 weeks for full post-production.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-q" aria-expanded="false" onclick="toggleFAQ(this)">
+              <span>Do you provide a written contract and backup equipment?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>Absolutely. Every booking comes with a <strong>written contract</strong> outlining all deliverables, timelines, and payment terms. We carry dual camera bodies, backup lenses, and external lighting to every event.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BLOG SECTION ── -->
+    <section
+      id="blog"
+      class="blog-section section-padding"
+      aria-label="Photography blog and tips"
+    >
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">Our Blog</span>
+          <h2 class="section-title">Wedding Photography <em>Tips &amp; Inspiration</em></h2>
+          <p class="section-sub">Expert advice, real wedding stories, and Odisha photography guides.</p>
+        </header>
+
+        <div class="blog-grid" role="list" aria-label="Blog posts">
+
+          <article class="blog-card reveal" role="listitem" itemscope itemtype="https://schema.org/BlogPosting">
+            <div class="blog-img" style="background:linear-gradient(135deg,#7b1fa2,#4a148c);" role="img" aria-label="How to choose a wedding photographer in Odisha">
+              <span aria-hidden="true">💡</span>
+            </div>
+            <div class="blog-body">
+              <span class="blog-cat">Wedding Tips</span>
+              <h3 class="blog-title" itemprop="headline">
+                <a href="/blog/how-to-choose-wedding-photographer-odisha" itemprop="url">
+                  How to Choose the Best Wedding Photographer in Odisha
+                </a>
+              </h3>
+              <p class="blog-excerpt" itemprop="description">
+                Booking a wedding photographer is one of the most important decisions. Here's what to look for — portfolio style, experience, packages, and reviews.
+              </p>
+              <div class="blog-meta">
+                <time itemprop="datePublished" datetime="2025-11-15">Nov 15, 2025</time>
+                <span>·</span>
+                <span>5 min read</span>
+              </div>
+              <a href="/blog/how-to-choose-wedding-photographer-odisha" class="blog-read-more">Read More →</a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal" role="listitem" itemscope itemtype="https://schema.org/BlogPosting">
+            <div class="blog-img" style="background:linear-gradient(135deg,#e65100,#bf360c);" role="img" aria-label="Top pre-wedding shoot locations in Odisha">
+              <span aria-hidden="true">🌅</span>
+            </div>
+            <div class="blog-body">
+              <span class="blog-cat">Locations</span>
+              <h3 class="blog-title" itemprop="headline">
+                <a href="/blog/best-pre-wedding-shoot-locations-odisha" itemprop="url">
+                  10 Best Pre-Wedding Shoot Locations in Odisha (2025 Guide)
+                </a>
+              </h3>
+              <p class="blog-excerpt" itemprop="description">
+                From Chilika Lake to Konark and Puri beach — discover the most photogenic pre-wedding destinations that Odisha has to offer.
+              </p>
+              <div class="blog-meta">
+                <time itemprop="datePublished" datetime="2025-10-02">Oct 02, 2025</time>
+                <span>·</span>
+                <span>7 min read</span>
+              </div>
+              <a href="/blog/best-pre-wedding-shoot-locations-odisha" class="blog-read-more">Read More →</a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal" role="listitem" itemscope itemtype="https://schema.org/BlogPosting">
+            <div class="blog-img" style="background:linear-gradient(135deg,#1a237e,#283593);" role="img" aria-label="Complete guide to Odia wedding photography rituals">
+              <span aria-hidden="true">📿</span>
+            </div>
+            <div class="blog-body">
+              <span class="blog-cat">Culture</span>
+              <h3 class="blog-title" itemprop="headline">
+                <a href="/blog/odia-wedding-photography-guide" itemprop="url">
+                  Complete Guide to Odia Wedding Photography — Rituals &amp; Shots
+                </a>
+              </h3>
+              <p class="blog-excerpt" itemprop="description">
+                A comprehensive guide to every ritual in an Odia wedding — from Nischay Yagna to Saptapadi — and the must-capture photography moments.
+              </p>
+              <div class="blog-meta">
+                <time itemprop="datePublished" datetime="2025-08-20">Aug 20, 2025</time>
+                <span>·</span>
+                <span>9 min read</span>
+              </div>
+              <a href="/blog/odia-wedding-photography-guide" class="blog-read-more">Read More →</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="text-center" style="margin-top:48px;">
+          <a href="/blog" class="btn btn-outline" aria-label="Read all blog posts">View All Posts →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT SECTION ── -->
+    <section
+      id="contact"
+      class="contact-section section-padding"
+      aria-label="Contact and booking"
+    >
+      <div class="container contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info reveal">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Book Your <em>Wedding Session</em></h2>
+          <p>Surya responds within 24 hours. For urgent bookings, WhatsApp is fastest.</p>
+
+          <div class="contact-items">
+            <a href="tel:+918847487066" class="contact-item" aria-label="Call Gurudev Photography">
+              <div class="ci-icon" aria-hidden="true">📞</div>
+              <div><strong>+91 88474 87066</strong><span>Call / WhatsApp</span></div>
+            </a>
+            <a href="mailto:Suryabehera533@gmail.com" class="contact-item" aria-label="Email Gurudev Photography">
+              <div class="ci-icon" aria-hidden="true">✉️</div>
+              <div><strong>Suryabehera533@gmail.com</strong><span>Email</span></div>
+            </a>
+            <div class="contact-item">
+              <div class="ci-icon" aria-hidden="true">📍</div>
+              <div><strong>Bhadrak, Odisha 756100</strong><span>India</span></div>
+            </div>
+          </div>
+
+          <a
+            href="https://wa.me/918847487066?text=Hi%20Surya%2C%20I%20want%20to%20book%20a%20session."
+            class="btn btn-whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat with Surya on WhatsApp"
+          >
+            <span aria-hidden="true">💬</span> Chat on WhatsApp
+          </a>
+
+          <!-- Google Maps Embed -->
+          <div class="map-wrap" aria-label="Location map — Bhadrak, Odisha">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14958.123456789!2d86.4950!3d21.0580!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1ac5c4a8a0b8b1%3A0x1234567890abcdef!2sBhadrak%2C+Odisha!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              width="100%"
+              height="240"
+              style="border:0;border-radius:12px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Gurudev Photography location map — Bhadrak, Odisha"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap reveal">
+          <form
+            id="enquiry-form"
+            class="contact-form"
+            novalidate
+            aria-label="Booking enquiry form"
+            onsubmit="handleFormSubmit(event)"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name <abbr title="Required" aria-label="Required">*</abbr></label>
+                <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your full name" aria-required="true" />
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone <abbr title="Required" aria-label="Required">*</abbr></label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+91 XXXXX XXXXX" aria-required="true" />
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <abbr title="Required" aria-label="Required">*</abbr></label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" aria-required="true" />
+              <span class="form-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="event-date">Event Date</label>
+                <input type="date" id="event-date" name="event_date" autocomplete="off" aria-label="Select your event date" />
+              </div>
+              <div class="form-group">
+                <label for="package">Package</label>
+                <select id="package" name="package" aria-label="Select a photography package">
+                  <option value="">Select package…</option>
+                  <option value="essentials">Essentials — ₹5,000</option>
+                  <option value="signature">Signature — ₹12,000</option>
+                  <option value="legacy">Legacy — ₹25,000</option>
+                  <option value="custom">Custom / Enquire</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell Surya about your event, venue, or any special requirements…" aria-label="Message for photographer"></textarea>
+            </div>
+
+            <!-- Honeypot (anti-spam) -->
+            <div style="display:none;" aria-hidden="true">
+              <input type="text" name="_honey" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" aria-label="Submit booking enquiry">
+              Send Enquiry →
+            </button>
+
+            <div id="form-success" class="form-success" role="alert" aria-live="assertive" hidden>
+              ✅ Thank you! Surya will contact you within 24 hours.
+            </div>
+            <div id="form-error" class="form-error-msg" role="alert" aria-live="assertive" hidden>
+              ❌ Please fill in all required fields correctly.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════
+       FOOTER
+  ══════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+    <div class="footer-top container">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo" aria-label="Gurudev Photography home">
+          <span aria-hidden="true">📷</span>
+          <strong>Gurudev Photography</strong>
+        </a>
+        <p>
+          Capturing the timeless moments of your most special day.
+          Based in Bhadrak, Odisha — serving all of India.
+        </p>
+        <div class="footer-social" aria-label="Social media links">
+          <a href="https://www.instagram.com/gurudevphotography"   target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram">📸 Instagram</a>
+          <a href="https://www.facebook.com/gurudevphotography"    target="_blank" rel="noopener noreferrer" aria-label="Follow on Facebook">👤 Facebook</a>
+          <a href="https://www.youtube.com/@gurudevphotography"    target="_blank" rel="noopener noreferrer" aria-label="Watch on YouTube">▶️ YouTube</a>
+          <a href="https://wa.me/918847487066"                     target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h3>Quick Links</h3>
+        <ul role="list">
+          <li><a href="/">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-nav" aria-label="Services navigation">
+        <h3>Services</h3>
+        <ul role="list">
+          <li><a href="/services/wedding-photography-bhadrak">Wedding Photography</a></li>
+          <li><a href="/services/pre-wedding-photography-odisha">Pre-Wedding Shoots</a></li>
+          <li><a href="/services/cinematic-wedding-films">Cinematic Films</a></li>
+          <li><a href="/services/baby-photography-bhadrak">Baby Photography</a></li>
+          <li><a href="/services/event-photography-odisha">Event Photography</a></li>
+          <li><a href="/services/drone-photography-odisha">Drone Aerial Shots</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <address>
+          <p>📞 <a href="tel:+918847487066">+91 88474 87066</a></p>
+          <p>✉️ <a href="mailto:Suryabehera533@gmail.com">Suryabehera533@gmail.com</a></p>
+          <p>📍 Bhadrak, Odisha 756100, India</p>
+          <p>🕐 Mon–Sun: 9:00 AM – 8:00 PM</p>
+        </address>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <p>© 2026 Gurudev Photography by Surya Narayan Behera. All Rights Reserved.</p>
+      <nav aria-label="Legal links">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════
+       FLOATING WHATSAPP BUTTON
+  ══════════════════════════════ -->
+  <a
+    href="https://wa.me/918847487066?text=Hi%20Surya%2C%20I%20want%20to%20book%20a%20session."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp — Gurudev Photography"
+    title="Chat on WhatsApp"
+  >
+    <span aria-hidden="true">💬</span>
+    <span class="wa-tooltip">Chat on WhatsApp</span>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button
+    id="back-to-top"
+    class="back-to-top"
+    aria-label="Back to top of page"
+    title="Back to top"
+    onclick="scrollToTop()"
+    hidden
+  >
+    ↑
+  </button>
+
+  <!-- ══════════════════════════════
+       SCRIPTS
+  ══════════════════════════════ -->
+  <script src="script.js" defer></script>
+
 </body>
 </html>
